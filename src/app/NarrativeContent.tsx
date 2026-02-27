@@ -76,9 +76,27 @@ export default function NarrativeContent() {
       link: "https://www.microsoft.com/en-us/ai"
     },
     {
-      date: "2026.02",
+      date: "2026.02.04",
+      title: "Claude Opus 4.6 출시",
+      desc: "추론의 심연을 탐구하는 Anthropic의 신작. 1M 컨텍스트와 SWE-Bench 80.2% 돌파로 에이전틱 코딩의 신기원을 열었습니다.",
+      link: "https://www.anthropic.com/news/claude-4-6"
+    },
+    {
+      date: "2026.02.05",
+      title: "GPT-5.3 Codex (Specialist)",
+      desc: "OpenAI의 코딩 특화 모델. 터미널 환경 최적화와 멀티 언어 SWE-Bench Pro에서 압도적 성능을 보이며 개발자의 뇌를 대체하기 시작했습니다.",
+      link: "https://openai.com/blog"
+    },
+    {
+      date: "2026.02.19",
+      title: "Google Gemini 3.1 Pro",
+      desc: "지능의 총체적 승리. GPQA Diamond 94.3%라는 경이로운 수치와 함께 범용 AI 에이전트 시장의 왕좌를 탈환했습니다.",
+      link: "https://deepmind.google/technologies/gemini/"
+    },
+    {
+      date: "2026.02.27",
       title: "대한민국 AI 임팩트 서밋 (오늘)",
-      desc: "글로벌 AI 거물들이 모여 '인류를 위한 AI'를 논의하며, AI가 창출하는 경제적 가치가 정점에 달하는 시기를 맞이했습니다.",
+      desc: "글로벌 AI 3대장이 실시간으로 경쟁하는 현장에서, AI가 창출하는 경제적 가치가 임계점을 넘었습니다.",
       link: "https://www.aitimes.com/"
     }
   ];
@@ -208,6 +226,37 @@ export default function NarrativeContent() {
           </p>
         </section>
 
+        {/* Benchmarks Section */}
+        <section className="reveal section-spacing">
+          <h2 style={{ fontSize: 'clamp(2rem, 5vw, 2.8rem)', marginBottom: '4rem', fontWeight: 900, textAlign: 'center' }}>
+            차세대 <span className="gradient-text">지능 지표</span> <br />
+            <span style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.4)', fontWeight: 400, letterSpacing: '0.2em' }}>FEBRUARY 2026 FRONTIER BENCHMARKS</span>
+          </h2>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '30px' }}>
+            <div className="glass-card" style={{ padding: '40px' }}>
+              <div className="benchmark-badge" style={{ marginBottom: '20px' }}>REASONING KING</div>
+              <h3 style={{ fontSize: '1.8rem', marginBottom: '10px', fontWeight: 900 }}>Gemini <span style={{ color: 'var(--accent-secondary)' }}>3.1 Pro</span></h3>
+              <div style={{ fontSize: '3.5rem', fontWeight: 900, marginBottom: '20px', color: '#fff' }}>94.3<span style={{ fontSize: '1.2rem', color: 'rgba(255,255,255,0.4)' }}>%</span></div>
+              <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.95rem' }}>GPQA Diamond (Graduate-level Reasoning)</p>
+            </div>
+
+            <div className="glass-card" style={{ padding: '40px' }}>
+              <div className="benchmark-badge" style={{ marginBottom: '20px' }}>CODING SPECIALIST</div>
+              <h3 style={{ fontSize: '1.8rem', marginBottom: '10px', fontWeight: 900 }}>Codex <span style={{ color: 'var(--accent-primary)' }}>5.3</span></h3>
+              <div style={{ fontSize: '3.5rem', fontWeight: 900, marginBottom: '20px', color: '#fff' }}>77.3<span style={{ fontSize: '1.2rem', color: 'rgba(255,255,255,0.4)' }}>%</span></div>
+              <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.95rem' }}>Terminal-Bench 2.0 (Agentic Execution)</p>
+            </div>
+
+            <div className="glass-card" style={{ padding: '40px' }}>
+              <div className="benchmark-badge" style={{ marginBottom: '20px' }}>AGENTIC MASTER</div>
+              <h3 style={{ fontSize: '1.8rem', marginBottom: '10px', fontWeight: 900 }}>Claude <span style={{ color: '#ff6b6b' }}>Opus 4.6</span></h3>
+              <div style={{ fontSize: '3.5rem', fontWeight: 900, marginBottom: '20px', color: '#fff' }}>80.2<span style={{ fontSize: '1.2rem', color: 'rgba(255,255,255,0.4)' }}>%</span></div>
+              <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.95rem' }}>SWE-Bench Verified (Full Engineering Cycle)</p>
+            </div>
+          </div>
+        </section>
+
         {/* Partners/Tools Logos */}
         <section className="reveal" style={{ marginBottom: '10vh', textAlign: 'center' }}>
           <p style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.3)', marginBottom: '2rem', letterSpacing: '0.3em', fontWeight: 600 }}>POWERING THE INDUSTRY</p>
@@ -223,11 +272,11 @@ export default function NarrativeContent() {
           <h2 style={{ fontSize: '2.5rem', marginBottom: '3.5rem', fontWeight: 800 }}>가속화되는 <br /><span className="gradient-text">양극화의 파도</span></h2>
           <p className="narrative-p">
             이제 세상은 두 부류로 나뉠 것입니다.
-            AI를 단순한 채팅방의 비서로 사용하는 자와, <strong>AI를 산업적 생산 수단으로 완전히 내재화한 자</strong>.
+            AI를 단순한 채팅방의 비서로 사용하는 자와, <span className="highlight-box">AI를 산업적 생산 수단으로 완전히 내재화한 자</span>.
             이들의 격차는 시간이 갈수록 기하급수적으로 벌어질 것이며, 이것은 곧 <strong>디지털 계급의 양극화</strong>로 이어질 것입니다.
           </p>
           <p className="narrative-p">
-            AI의 성능은 소프트웨어의 알고리즘만큼이나, 그것을 <strong>사용하는 사람의 실력</strong>에 의해 결정됩니다.
+            AI의 성능은 소프트웨어의 알고리즘만큼이나, 그것을 <span className="highlight-box-purple">사용하는 사람의 실력</span>에 의해 결정됩니다.
             같은 악기를 들어도 연주자에 따라 소음이 되기도, 명곡이 되기도 하듯
             당신의 '바이브'가 이 산업의 퀄리티를 결정합니다.
           </p>
