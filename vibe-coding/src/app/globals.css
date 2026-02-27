@@ -1,0 +1,133 @@
+:root {
+  --bg-color: #050505;
+  --text-color: #ffffff;
+  --text-muted: #a0a0a0;
+  --accent-primary: #7000FF;
+  --accent-secondary: #00FFD1;
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --max-width: 900px;
+  --font-heading: 'Outfit', 'Noto Sans KR', var(--font-geist-sans), sans-serif;
+  --font-body: 'Noto Sans KR', var(--font-geist-sans), sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-body);
+  line-height: 1.8;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--accent-secondary), var(--accent-primary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  padding: 40px;
+}
+
+.bg-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.1;
+}
+
+.orb-1 {
+  width: 600px;
+  height: 600px;
+  background: var(--accent-primary);
+  top: -200px;
+  right: -100px;
+}
+
+.orb-2 {
+  width: 500px;
+  height: 500px;
+  background: var(--accent-secondary);
+  bottom: -150px;
+  left: -100px;
+}
+
+/* Custom Typography for Narrative */
+.narrative-p {
+  font-size: 1.35rem;
+  margin-bottom: 2.5rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  max-width: 800px;
+}
+
+.narrative-p strong {
+  font-weight: 700;
+  color: var(--accent-secondary);
+}
+
+.narrative-quote {
+  font-size: 2.2rem;
+  font-style: italic;
+  margin: 6rem 0;
+  padding: 1rem 0 1rem 3rem;
+  border-left: 6px solid var(--accent-primary);
+  color: #fff;
+  line-height: 1.4;
+  font-family: var(--font-heading);
+}
+
+.section-spacing {
+  margin-bottom: 25vh;
+}
