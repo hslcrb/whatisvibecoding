@@ -163,6 +163,18 @@ export default function NarrativeContent() {
               바이브 코딩의 시대, 엔지니어는 시스템의 부품이 아닌 가치의 영혼(Ghost)이 되어야 합니다.
             </p>
           </div>
+
+          {/* Hero to Content Gradient Blend */}
+          <div style={{
+            position: 'absolute',
+            bottom: '-100px',
+            left: '0',
+            width: '100%',
+            height: '200px',
+            background: 'linear-gradient(to bottom, transparent, rgba(5,5,5,0.8) 50%, #050505)',
+            zIndex: 1,
+            pointerEvents: 'none'
+          }}></div>
         </section>
 
         {/* The Demonstration Section: ex.png */}
