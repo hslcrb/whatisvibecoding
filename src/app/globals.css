@@ -69,7 +69,33 @@
 }
 
 :root {
-  /* Default: Light Mode */
+  /* Default: Dark Mode */
+  --bg-color: #050505;
+  --text-color: #ffffff;
+  --text-muted: #a0a0a0;
+  --accent-primary: #7000FF;
+  --accent-secondary: #00FFD1;
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-hover-bg: rgba(255, 255, 255, 0.05);
+  --glass-hover-border: rgba(112, 0, 255, 0.4);
+  --header-link: rgba(255, 255, 255, 0.4);
+  --highlight-purple-text: #ffffff;
+  --highlight-teal-text: #050505;
+  --glow-opacity: 0.1;
+  --card-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  --theme-invert: brightness(0) invert(1);
+
+  --max-width: 1200px;
+  --font-heading: 'A2z', 'Outfit', 'Noto Sans KR', sans-serif;
+  --font-body: 'A2z', 'Noto Sans KR', sans-serif;
+
+  /* Fluid Scaling Foundations */
+  --fluid-min-width: 320;
+  --fluid-max-width: 1920;
+}
+
+[data-theme='light'] {
   --bg-color: #ffffff;
   --text-color: #1a1a1a;
   --text-muted: #666666;
@@ -86,32 +112,6 @@
   --glow-opacity: 0.05;
   --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   --theme-invert: brightness(0);
-
-  --max-width: 1200px;
-  --font-heading: 'A2z', 'Outfit', 'Noto Sans KR', sans-serif;
-  --font-body: 'A2z', 'Noto Sans KR', sans-serif;
-
-  /* Fluid Scaling Foundations */
-  --fluid-min-width: 320;
-  --fluid-max-width: 1920;
-}
-
-[data-theme='dark'] {
-  --bg-color: #050505;
-  --text-color: #ffffff;
-  --text-muted: #a0a0a0;
-  --accent-primary: #7000FF;
-  --accent-secondary: #00FFD1;
-  --glass-bg: rgba(255, 255, 255, 0.03);
-  --glass-border: rgba(255, 255, 255, 0.1);
-  --glass-hover-bg: rgba(255, 255, 255, 0.05);
-  --glass-hover-border: rgba(112, 0, 255, 0.4);
-  --header-link: rgba(255, 255, 255, 0.4);
-  --highlight-purple-text: #ffffff;
-  --highlight-teal-text: #050505;
-  --glow-opacity: 0.1;
-  --card-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-  --theme-invert: brightness(0) invert(1);
 }
 
 @media (min-width: 2000px) {
