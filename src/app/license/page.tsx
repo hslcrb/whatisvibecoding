@@ -3,10 +3,10 @@ import PolicyLayout from '../PolicyLayout';
 export default function LicensePage() {
     return (
         <PolicyLayout title="라이선스 (MIT)">
-            <div className="policy-content" style={{ fontFamily: 'monospace', fontSize: '1rem', whiteSpace: 'pre-wrap' }}>
+            <div className="policy-content" style={{ fontFamily: 'monospace', fontSize: '1rem', whiteSpace: 'pre-wrap', lineHeight: '1.6' }}>
                 MIT License
 
-                Copyright (c) 2008-2026 Rheehose (Rhee Creative)
+                Copyright (c) 2026 Vibe Coding Industry Federation
 
                 Permission is hereby granted, free of charge, to any person obtaining a copy
                 of this software and associated documentation files (the "Software"), to deal
