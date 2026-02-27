@@ -104,13 +104,23 @@ export default function NarrativeContent() {
   return (
     <div style={{ perspective: '1000px' }}>
       <FluidBackground />
+
+      {/* Floating Decorative Elements */}
+      <div className="bg-glow">
+        <div className="glow-orb orb-1"></div>
+        <div className="glow-orb orb-2"></div>
+        <div className="glow-orb orb-3"></div>
+        <div className="glow-orb orb-4"></div>
+      </div>
+
+      {/* Floating Particles/Shapes */}
+      <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', pointerEvents: 'none', zIndex: -1 }}>
+        <div className="floating-shape" style={{ top: '15%', left: '10%', width: '150px', height: '150px', background: 'radial-gradient(circle, rgba(112, 0, 255, 0.1) 0%, transparent 70%)', borderRadius: '50%', animation: 'float 20s infinite linear' }}></div>
+        <div className="floating-shape" style={{ top: '60%', left: '80%', width: '250px', height: '250px', background: 'radial-gradient(circle, rgba(0, 255, 209, 0.08) 0%, transparent 70%)', borderRadius: '50%', animation: 'float 25s infinite linear reverse' }}></div>
+        <div className="floating-shape" style={{ top: '40%', left: '50%', width: '300px', height: '300px', background: 'radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, transparent 70%)', borderRadius: '50%', animation: 'float 30s infinite ease-in-out' }}></div>
+      </div>
+
       <div className="container" ref={containerRef} style={{ paddingTop: '20vh', paddingBottom: '20vh', position: 'relative' }}>
-        <div className="bg-glow">
-          <div className="glow-orb orb-1"></div>
-          <div className="glow-orb orb-2"></div>
-          <div className="glow-orb orb-3"></div>
-          <div className="glow-orb orb-4"></div>
-        </div>
         {/* Intro: The Personal Hook */}
         <section className="reveal section-spacing">
           <h1 style={{ fontSize: 'clamp(3rem, 10vw, 5.5rem)', fontWeight: 900, marginBottom: '3rem' }}>
