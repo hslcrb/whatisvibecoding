@@ -119,6 +119,9 @@ export default function NarrativeContent() {
         <div className="floating-shape" style={{ top: '15%', left: '10%', width: '150px', height: '150px', background: 'radial-gradient(circle, rgba(112, 0, 255, 0.1) 0%, transparent 70%)', borderRadius: '50%', animation: 'float 20s infinite linear' }}></div>
         <div className="floating-shape" style={{ top: '60%', left: '80%', width: '250px', height: '250px', background: 'radial-gradient(circle, rgba(0, 255, 209, 0.08) 0%, transparent 70%)', borderRadius: '50%', animation: 'float 25s infinite linear reverse' }}></div>
         <div className="floating-shape" style={{ top: '40%', left: '50%', width: '300px', height: '300px', background: 'radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, transparent 70%)', borderRadius: '50%', animation: 'float 30s infinite ease-in-out' }}></div>
+        <div className="floating-shape" style={{ top: '75%', left: '5%', width: '400px', opacity: 0.15, zIndex: -1 }}>
+          <img src="/svg-ani/code-nebula.svg" alt="" className="no-interaction" style={{ width: '100%' }} />
+        </div>
       </div>
 
       <div className="container" ref={containerRef} style={{ paddingTop: '20vh', paddingBottom: '20vh', position: 'relative' }}>
@@ -228,19 +231,20 @@ export default function NarrativeContent() {
         <section className="reveal section-spacing">
           <h2 style={{ fontSize: 'clamp(1.8rem, 5vw, 2.8rem)', marginBottom: '3rem', fontWeight: 800, textAlign: 'center' }}>바이브 코딩의 <span className="gradient-text">생산성 궤적</span></h2>
           <div className="glass-card" style={{ padding: 'clamp(20px, 4vw, 40px)', position: 'relative', overflow: 'hidden' }}>
-            <svg viewBox="0 0 800 400" style={{ width: '100%', height: 'auto', display: 'block' }}>
+            <svg viewBox="0 0 800 500" style={{ width: '100%', height: 'auto', display: 'block' }}>
               {/* Grid Lines */}
-              <line x1="50" y1="350" x2="750" y2="350" stroke="rgba(255,255,255,0.1)" strokeWidth="1" />
-              <line x1="50" y1="50" x2="50" y2="350" stroke="rgba(255,255,255,0.1)" strokeWidth="1" />
+              <line x1="50" y1="450" x2="750" y2="450" stroke="rgba(255,255,255,0.1)" strokeWidth="1" />
+              <line x1="50" y1="50" x2="50" y2="450" stroke="rgba(255,255,255,0.1)" strokeWidth="1" />
 
               {/* Curve: V-Curve (The Dip and the Jump) */}
               <path
-                d="M 50 200 Q 150 420 300 150 T 750 50"
+                d="M 50 250 Q 150 480 300 220 Q 450 30 750 80"
                 fill="none"
                 stroke="url(#curveGradient)"
                 strokeWidth="4"
                 strokeLinecap="round"
                 className="path-animation"
+                style={{ strokeDasharray: '1000', strokeDashoffset: '1000', animation: 'drawGraph 3s ease-out forwards' }}
               />
 
               <defs>
@@ -252,8 +256,8 @@ export default function NarrativeContent() {
               </defs>
 
               {/* Labels */}
-              <text x="60" y="220" fill="rgba(255,255,255,0.4)" fontSize="12">전통적 코딩</text>
-              <text x="180" y="370" fill="var(--accent-primary)" fontSize="14" fontWeight="800">초기 적응기 (Dip)</text>
+              <text x="60" y="270" fill="rgba(255,255,255,0.4)" fontSize="12">전통적 코딩</text>
+              <text x="180" y="470" fill="var(--accent-primary)" fontSize="14" fontWeight="800">초기 적응기 (Dip)</text>
               <text x="500" y="100" fill="#00ffd1" fontSize="18" fontWeight="900">압도적 생산성 폭발</text>
             </svg>
             <div style={{ marginTop: '30px', textAlign: 'center' }}>

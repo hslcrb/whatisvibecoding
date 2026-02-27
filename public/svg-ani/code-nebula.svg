@@ -1,0 +1,37 @@
+<svg width="600" height="600" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .star { fill: white; animation: twinkle 3s infinite ease-in-out; }
+    .nebula {
+      fill: url(#nebulaGradient);
+      filter: blur(40px);
+      opacity: 0.4;
+      animation: swirl 20s infinite linear;
+      transform-origin: center;
+    }
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.3; transform: scale(0.8); }
+      50% { opacity: 1; transform: scale(1.2); }
+    }
+    @keyframes swirl {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+  </style>
+  <defs>
+    <radialGradient id="nebulaGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#7000FF" />
+      <stop offset="60%" stop-color="#00FFD1" />
+      <stop offset="100%" stop-color="transparent" />
+    </radialGradient>
+  </defs>
+  <circle cx="300" cy="300" r="250" class="nebula" />
+  
+  <circle cx="150" cy="150" r="1.5" class="star" style="animation-delay: 0s;" />
+  <circle cx="450" cy="150" r="1.5" class="star" style="animation-delay: 1.2s;" />
+  <circle cx="150" cy="450" r="1.5" class="star" style="animation-delay: 0.6s;" />
+  <circle cx="450" cy="450" r="1.5" class="star" style="animation-delay: 2.1s;" />
+  <circle cx="300" cy="100" r="1" class="star" style="animation-delay: 1.8s;" />
+  <circle cx="100" cy="300" r="1" class="star" style="animation-delay: 0.3s;" />
+  <circle cx="500" cy="300" r="1" class="star" style="animation-delay: 1.5s;" />
+  <circle cx="300" cy="500" r="1" class="star" style="animation-delay: 0.9s;" />
+</svg>
