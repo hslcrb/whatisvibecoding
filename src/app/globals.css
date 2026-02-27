@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap');
+
 @font-face {
   font-family: 'A2z';
   src: url('/fonts/A2z-1Thin.woff2') format('woff2');
@@ -395,4 +397,4 @@ section::after {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-}
+}.antigravity-text { font-family: 'Google Sans Flex', sans-serif !important; font-weight: 500; letter-spacing: -0.02em; color: #fff; }

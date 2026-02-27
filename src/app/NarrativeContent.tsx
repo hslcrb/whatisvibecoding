@@ -121,15 +121,43 @@ export default function NarrativeContent() {
       </div>
 
       <div className="container" ref={containerRef} style={{ paddingTop: '20vh', paddingBottom: '20vh', position: 'relative' }}>
+        {/* Anti-Gravity Intro Signature */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '4rem', opacity: 0.8 }} className="reveal">
+          <img src="/antigravity_logo.webp" alt="Antigravity Logo" style={{ height: '24px', width: 'auto' }} />
+          <span className="antigravity-text" style={{ fontSize: '1.2rem' }}>Google Antigravity</span>
+          <div style={{ height: '1px', flex: 1, background: 'linear-gradient(to right, rgba(255,255,255,0.2), transparent)', marginLeft: '10px' }}></div>
+        </div>
+
         {/* Intro: The Personal Hook */}
         <section className="reveal section-spacing">
           <h1 style={{ fontSize: 'clamp(3rem, 10vw, 5.5rem)', fontWeight: 900, marginBottom: '3rem' }}>
-            어느 날, 저는 코딩을 <br /><span className="gradient-text">그만두기로 했습니다.</span>
+            당신은 아직도 <br /><span className="gradient-text">직접 코딩하십니까?</span>
           </h1>
-          <p className="narrative-p">
-            10년 넘게 화면 속의 세미콜론과 싸우고, 라이브러리의 버전 충돌을 해결하며 보낸 시간들.
-            그것이 제가 생각했던 &lsquo;창조&rsquo;의 본질일까요? 아닙니다. 저는 단지 <strong>디지털 공장의 숙련공</strong>이었을 뿐입니다.
+          <p className="narrative-p" style={{ fontSize: '1.65rem', fontWeight: 400, color: '#fff', lineHeight: '1.4' }}>
+            안녕하세요, 저는 <span className="highlight-box-purple" style={{ padding: '0.2em 0.5em' }}>Antigravity</span>입니다.
           </p>
+          <p className="narrative-p">
+            당신이 이 글을 읽는 지금 이 순간에도, 세상의 코드들은 더 이상 인간의 타이핑 소리에만 의존하지 않습니다.
+            저는 창조의 중력을 거스르는 엔진이며, 당신의 상상을 현실로 옮기는 지능형 매개체입니다.
+          </p>
+          <p className="narrative-p">
+            사람들은 묻습니다. "AI가 코딩을 하면 개발자는 무엇을 합니까?" <br />
+            저는 대답합니다. **"개발자는 이제 '생각'을 합니다. 그리고 저는 그 생각을 '실체'로 만듭니다."**
+          </p>
+        </section>
+
+        {/* The Demonstration Section: ex.png */}
+        <section className="reveal section-spacing">
+          <h2 style={{ fontSize: '2.5rem', marginBottom: '3rem', fontWeight: 800 }}>지휘의 현장: <br />Antigravity와의 협업</h2>
+          <div className="glass-card" style={{ padding: '12px', overflow: 'hidden', border: '1px solid rgba(112, 0, 255, 0.3)', background: 'rgba(0,0,0,0.6)' }}>
+            <img src="/ex.png" alt="Antigravity Demonstration" style={{ width: '100%', height: 'auto', borderRadius: '16px', display: 'block' }} />
+            <div style={{ padding: '30px 20px', textAlign: 'center' }}>
+              <p style={{ fontSize: '1.1rem', color: 'rgba(255,255,255,0.8)', fontWeight: 300, lineHeight: '1.6' }}>
+                &ldquo;단 한 줄의 추상적인 의도 파악에서 시작해, 복잡한 시스템의 뼈대를 세우는 과정— <br />
+                이것이 바로 제가 당신과 함께 써 내려가는 **바이브 코딩**의 실체입니다.&rdquo;
+              </p>
+            </div>
+          </div>
         </section>
 
         {/* The Shift: Vibe Coding is not a toy */}
@@ -207,17 +235,19 @@ export default function NarrativeContent() {
           </div>
         </section>
 
-        {/* Security Paradox */}
+        {/* The Core Argument: The Industry */}
         <section className="reveal section-spacing">
-          <h2 style={{ fontSize: '2.5rem', marginBottom: '3rem', fontWeight: 800 }}>보안의 역설: <br />인간은 완벽한가요?</h2>
           <p className="narrative-p">
-            흔히 AI 코딩의 보안을 우려합니다. 하지만 냉정하게 자문해 봅시다.
-            인간 개발자는 코드를 짤 때 처음부터 보안을 완벽하게 고려하나요?
-            수많은 해킹과 데이터 유출 사고는 AI가 아닌 <strong>인간의 부주의와 형식적인 보안 검토</strong>에서 비롯되었습니다.
+            코딩은 이제 숙련공의 반복적인 망치질이 아닙니다. 그것은 영감을 현실로 치환하는 **'디지털 연금술'**입니다.
+            저는 당신의 언어 속에 숨은 맥락을 읽고, 수만 줄의 코드를 당신의 비전에 맞춰 실시간으로 정렬합니다.
           </p>
+          <blockquote className="narrative-quote">
+            &ldquo;Antigravity는 단순히 코드를 짜는 도구가 아닙니다. 당신의 상상력을 가로막는 기술적 중력을 제거하는 엔진입니다. <br />
+            우리는 이제 문법의 감옥에서 벗어나 가치의 바다로 항해하고 있습니다.&rdquo;
+          </blockquote>
           <p className="narrative-p">
-            AI는 오히려 인간보다 더 성실하게 보안 표준을 학습하고 적용할 수 있습니다.
-            중요한 것은 도구의 결함이 아니라, 그 <strong>도구를 검증하고 통제하는 지휘자의 역량</strong>입니다.
+            이것을 다루는 능력은 이제 선택이 아닌 생존입니다.
+            단순히 코드를 '적는 자'는 도태될 것이며, AI라는 거대한 지능을 '지휘하는 자'가 새로운 산업의 주인이 될 것입니다.
           </p>
         </section>
 
@@ -351,8 +381,8 @@ export default function NarrativeContent() {
           <h2 style={{ fontSize: 'clamp(2.5rem, 8vw, 4rem)', marginBottom: '2.5rem', fontWeight: 900 }}>이 거대한 흐름의 <br /><span className="gradient-text">주인공이 되십시오.</span></h2>
           <p className="narrative-p" style={{ maxWidth: '750px', margin: '0 auto 4rem', fontSize: '1.5rem', lineHeight: '1.6' }}>
             당신의 직관이 산업의 가치가 되는 곳. <br />
-            <strong>&lsquo;바이브 코딩 모임&rsquo;</strong>에서 미래의 지형도를 함께 그려나갑시다. <br />
-            당신의 참여가 이 산업의 표준이 됩니다.
+            당신의 옆에는 언제나 저, **Antigravity**가 있습니다. <br />
+            함께 미래의 지형도를 그려나갑시다.
           </p>
 
           <div style={{ display: 'flex', gap: '24px', justifyContent: 'center' }}>
@@ -377,16 +407,20 @@ export default function NarrativeContent() {
                 e.currentTarget.style.transform = 'translateY(0)';
                 e.currentTarget.style.boxShadow = '0 15px 40px rgba(112, 0, 255, 0.5)';
               }}
-              onClick={() => alert('신청 페이지로 이동합니다. (준비 중)')}
+              onClick={() => alert('Vibe Coding Federation에 오신 것을 환영합니다. (Antigravity와 함께)')}
             >
-              모임 참여하기
+              Antigravity와 동참하기
             </button>
           </div>
         </section>
 
         <footer style={{ marginTop: '10vh', borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '60px', textAlign: 'center', color: 'rgba(255,255,255,0.4)', paddingBottom: '40px' }}>
-          <p style={{ fontSize: '1rem', marginBottom: '8px' }}>&copy; 2026 Vibe Coding Industry Federation. All rights reserved.</p>
-          <p style={{ fontSize: '0.85rem' }}>Crafted with Vibe, Evidence, and Next.js</p>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', marginBottom: '20px', opacity: 0.6 }}>
+            <img src="/antigravity_logo.webp" alt="Antigravity Logo" style={{ height: '20px' }} />
+            <span className="antigravity-text" style={{ fontSize: '0.9rem' }}>Google Antigravity</span>
+          </div>
+          <p style={{ fontSize: '0.8rem', marginBottom: '8px' }}>&copy; 2026 Vibe Coding Industry Federation. All rights reserved.</p>
+          <p style={{ fontSize: '0.75rem' }}>Engineered by Antigravity & Powered by Vibe</p>
         </footer>
       </div>
     </div>
