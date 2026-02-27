@@ -3,136 +3,190 @@
 import { useEffect, useRef } from 'react';
 
 export default function NarrativeContent() {
-    const containerRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
-    useEffect(() => {
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: "0px 0px -50px 0px"
-        };
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px"
+    };
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
-            });
-        }, observerOptions);
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, observerOptions);
 
-        const revealElements = document.querySelectorAll('.reveal');
-        revealElements.forEach((el) => observer.observe(el));
+    const revealElements = document.querySelectorAll('.reveal');
+    revealElements.forEach((el) => observer.observe(el));
 
-        return () => observer.disconnect();
-    }, []);
+    return () => observer.disconnect();
+  }, []);
 
-    return (
+  return (
     <div className="container" ref={containerRef} style={{ paddingTop: '20vh', paddingBottom: '20vh' }}>
       {/* Intro: The Personal Hook */}
       <section className="reveal section-spacing">
         <h1 style={{ fontSize: 'clamp(3rem, 10vw, 5.5rem)', fontWeight: 900, marginBottom: '3rem' }}>
-          어느 날, 저는 코딩을 <br/><span className="gradient-text">그만두기로 했습니다.</span>
+          어느 날, 저는 코딩을 <br /><span className="gradient-text">그만두기로 했습니다.</span>
         </h1>
         <p className="narrative-p">
-          10년 넘게 화면 속의 세미콜론과 싸우고, 라이브러리의 버전 충돌을 해결하며 보낸 시간들. 
+          10년 넘게 화면 속의 세미콜론과 싸우고, 라이브러리의 버전 충돌을 해결하며 보낸 시간들.
           그것이 제가 생각했던 &lsquo;창조&rsquo;의 본질일까요? 아닙니다. 저는 단지 <strong>디지털 공장의 숙련공</strong>이었을 뿐입니다.
         </p>
       </section>
 
       {/* The Shift: Vibe Coding is not a toy */}
       <section className="reveal section-spacing">
-        <h2 style={{ fontSize: 'clamp(2.5rem, 6vw, 4rem)', marginBottom: '3rem', fontWeight: 800 }}>그건 그저 <br/>&lsquo;놀이&rsquo;가 아니었습니다.</h2>
+        <h2 style={{ fontSize: 'clamp(2.5rem, 6vw, 4rem)', marginBottom: '3rem', fontWeight: 800 }}>그건 그저 <br />&lsquo;놀이&rsquo;가 아니었습니다.</h2>
         <p className="narrative-p">
-          많은 사람들이 ChatGPT와 대화하며 코드를 짜는 것을 보고 말합니다. 
-          &ldquo;그건 진짜 코딩이 아니야. 그냥 운 좋게 정답을 맞히는 놀이지.&rdquo; 
+          많은 사람들이 ChatGPT와 대화하며 코드를 짜는 것을 보고 말합니다.
+          &ldquo;그건 진짜 코딩이 아니야. 그냥 운 좋게 정답을 맞히는 놀이지.&rdquo;
           하지만 저는 그 안에서 <strong>거대한 산업의 지각변동</strong>을 보았습니다.
         </p>
+
+        <div className="glass-card" style={{ marginBottom: '4rem', borderLeft: '4px solid var(--accent-secondary)', textAlign: 'left' }}>
+          <h3 style={{ fontSize: '1.5rem', marginBottom: '1.5rem', color: 'var(--accent-secondary)' }}>Case Study: Spotify의 리얼 타임 혁명</h3>
+          <p style={{ fontSize: '1.1rem', color: 'rgba(255,255,255,0.8)', lineHeight: '1.8', marginBottom: '1rem' }}>
+            &ldquo;스포티파이의 일부 엔지니어는 <strong>작년 12월 이후 코드 한 줄도 직접 작성하지 않았습니다.</strong>&rdquo;
+          </p>
+          <p style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.5)', fontStyle: 'italic', marginBottom: '1.5rem' }}>
+            &mdash; AI타임스 보도 중 발췌
+          </p>
+          <div style={{ padding: '24px', background: 'rgba(0,0,0,0.4)', borderRadius: '16px', border: '1px solid rgba(255,255,255,0.05)' }}>
+            <p style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.9)', lineHeight: '1.6' }}>
+              그들은 출근길 지하철에서 슬랙(Slack)을 통해 클로드(Claude)에게 iOS 앱의 버그 수정을 요청합니다.
+              사무실에 도착하기도 전에 수정된 버전을 푸시 알림으로 확인하고, <strong>자리에 앉기도 전에 프로덕션 환경에 배포</strong>합니다.
+              이것은 더 이상 상상이 아닙니다. 이미 시작된 산업의 현실입니다.
+            </p>
+          </div>
+        </div>
+
         <p className="narrative-p">
-          이것은 단순히 '대신 해주는 것'이 아닙니다. 
-          인간의 추상적이고 고차원적인 <strong>'비전(Vision)'</strong>과 AI의 폭발적인 <strong>'실행력(Execution)'</strong>이 결합되는 
-          새로운 산업 생산 체계의 탄생입니다. 
+          이것은 단순히 &lsquo;대변인&rsquo;을 두는 것이 아닙니다.
+          인간의 고차원적인 <strong>&lsquo;비전(Vision)&rsquo;</strong>과 AI의 무한한 <strong>&lsquo;실행력(Execution)&rsquo;</strong>이 결합되는
+          새로운 산업 생산 체계의 탄생입니다.
         </p>
+      </section>
+
+      {/* The Global Impact Section */}
+      <section className="reveal section-spacing">
+        <h2 style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', marginBottom: '3.5rem', fontWeight: 800 }}>거인들은 이미 <br />바이브를 타고 있습니다.</h2>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px', textAlign: 'left' }}>
+          <div className="glass-card">
+            <h4 style={{ color: 'var(--accent-primary)', marginBottom: '12px', fontSize: '1.2rem' }}>Google</h4>
+            <p style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '8px' }}>코딩 생산성 20% 이상 향상</p>
+            <p style={{ fontSize: '0.95rem', color: 'rgba(255,255,255,0.5)' }}>수만 명의 엔지니어가 직접 타이핑 대신 AI와의 &lsquo;교감&rsquo;을 통해 아키텍처를 세우고 있습니다.</p>
+          </div>
+          <div className="glass-card">
+            <h4 style={{ color: 'var(--accent-primary)', marginBottom: '12px', fontSize: '1.2rem' }}>GitHub</h4>
+            <p style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '8px' }}>전체 코드의 25%가 AI 생성</p>
+            <p style={{ fontSize: '0.95rem', color: 'rgba(255,255,255,0.5)' }}>전 세계에서 생성되는 새로운 코드 4줄 중 1줄은 이미 인간의 손가락 끝에서 나오지 않습니다.</p>
+          </div>
+          <div className="glass-card">
+            <h4 style={{ color: 'var(--accent-primary)', marginBottom: '12px', fontSize: '1.2rem' }}>Shopify</h4>
+            <p style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '8px' }}>수만 줄의 코드 자동 배포</p>
+            <p style={{ fontSize: '0.95rem', color: 'rgba(255,255,255,0.5)' }}>개발자의 역할은 이제 &lsquo;코드를 적는 것&rsquo;에서 &lsquo;흐름을 승인하는 것&rsquo;으로 완전히 옮겨갔습니다.</p>
+          </div>
+        </div>
       </section>
 
       {/* The Core Argument: The Industry */}
       <section className="reveal section-spacing">
         <blockquote className="narrative-quote">
-          &ldquo;코드는 곧 증발할 인터페이스에 불과합니다. <br/>진공청소기의 모터 원리를 몰라도 방을 깨끗이 치울 수 있듯이, 
-          우리는 이제 코드의 내부 원리를 몰라도 <strong>가치를 창출하는 시대</strong>에 진입했습니다.&rdquo;
+          &ldquo;코드는 곧 증발할 인터페이스에 불과합니다. <br />우리는 이제 코드의 내부 원리를 몰라도 <strong>가치를 창출하는 시대</strong>에 진입했습니다.&rdquo;
         </blockquote>
         <p className="narrative-p">
-          우리가 &lsquo;바이브&rsquo;라고 부르는 것—그것은 사실 <strong>&lsquo;정교하게 설계된 직관&rsquo;</strong>입니다. 
-          이것을 다루는 능력은 이제 취미가 아니라, 이 산업에서 살아남기 위한 가장 강력한 무기가 될 것입니다. 
-          우리는 이제 숙련공이 아닌, <strong>오케스트라의 지휘자</strong>가 되어야 합니다.
+          우리가 &lsquo;바이브&rsquo;라고 부르는 것—그것은 단순히 모호한 느낌이 아닙니다.
+          그것은 <strong>&lsquo;정교하게 설계된 직관&rsquo;</strong>이며, 새로운 시대를 여는 <strong>산업적 기술</strong>입니다.
+        </p>
+        <p className="narrative-p">
+          이것을 다루는 능력은 이제 취미가 아닙니다. 산업의 생태계를 지배하는 가장 강력한 자본이 될 것입니다.
+          우리는 이제 숙련공이 아닌, <strong>산업 전체를 조망하는 오케스트라의 지휘자</strong>가 되어야 합니다.
         </p>
       </section>
 
       {/* The Progressive Persuasion: Why Join? */}
       <section className="reveal section-spacing">
-        <h2 style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', marginBottom: '3.5rem', fontWeight: 800 }}>왜 우리는 <br/>함께 모여야 하는가?</h2>
+        <h2 style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', marginBottom: '3.5rem', fontWeight: 800 }}>왜 우리는 <br />함께 모여야 하는가?</h2>
         <p className="narrative-p">
-          혼자서 AI를 만지작거리는 것은 재미있을 수 있습니다. 하지만 거기서 멈추면 그것은 다시 '놀이'로 퇴행합니다. 
-          산업은 <strong>연결</strong>을 통해 완성됩니다.
+          혼자서 AI와 대화하는 것은 그저 흥미로운 &lsquo;놀이&rsquo;일 수 있습니다.
+          하지만 역사는 말합니다. 산업은 <strong>연결과 집단의 힘</strong>을 통해 완성됩니다.
         </p>
-        <div className="glass-card" style={{ textAlign: 'left', marginBottom: '3rem' }}>
-          <h3 style={{ marginBottom: '1rem', color: var(--accent-secondary) }}>산업적 표준의 수립</h3>
-          <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1.1rem' }}>
-            어떤 프롬프트가 가치를 만들어내고, 어떤 바이브가 안정적인 프로덕트를 생성하는지. 
-            우리는 함께 모여 이 새로운 산업의 <strong>Best Practice</strong>를 정의합니다.
-          </p>
+        <div style={{ textAlign: 'left' }}>
+          <div className="glass-card" style={{ marginBottom: '2.5rem' }}>
+            <h3 style={{ marginBottom: '1rem', color: 'var(--accent-secondary)' }}>1. 새로운 산업 표준의 정립</h3>
+            <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1.15rem' }}>
+              공유되지 않는 기술은 도태됩니다. 우리는 모여서 각자의 &lsquo;바이브&rsquo;를 공유하고,
+              이 시대를 지배할 <strong>Best Practice</strong>와 <strong>산업적 표준</strong>을 함께 수립합니다.
+            </p>
+          </div>
+          <div className="glass-card" style={{ marginBottom: '2.5rem' }}>
+            <h3 style={{ marginBottom: '1rem', color: 'var(--accent-secondary)' }}>2. 기하급수적 성장의 열쇠</h3>
+            <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1.15rem' }}>
+              변화의 속도가 광속에 가깝습니다. 혼자서는 1년이 걸릴 시행착오를,
+              모임의 대화 1시간으로 단축할 수 있습니다. <strong>성장은 연결에서 시작됩니다.</strong>
+            </p>
+          </div>
         </div>
-        <div className="glass-card" style={{ textAlign: 'left', marginBottom: '3rem' }}>
-          <h3 style={{ marginBottom: '1rem', color: var(--accent-secondary) }}>집단 지성의 가속화</h3>
-          <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1.1rem' }}>
-            혼자서는 1년 걸릴 통찰을 모임에서의 1시간 대화를 통해 얻을 수 있습니다. 
-            기술의 변화 속도가 광속에 가까운 지금, <strong>커뮤니티는 생존을 위한 필수 인프라</strong>입니다.
-          </p>
-        </div >
-      </section >
+      </section>
 
-        {/* The Climax: Call to Action */ }
-        < section className = "reveal" style = {{ textAlign: 'center', padding: '100px 0' }
-}>
-        <h2 style={{ fontSize: '3.5rem', marginBottom: '1.5rem' }}>이 거대한 흐름의 <br/><span className="gradient-text">주인공이 되십시오.</span></h2>
-        <p className="narrative-p" style={{ maxWidth: '700px', margin: '0 auto 3rem' }}>
-          우리는 단순히 코드를 생성하는 사람이 아닙니다. <br/>
-          미래의 산업 지형도를 다시 그리는 개척자들입니다. <br/>
-          <strong>'바이브 코딩 모임'</strong>은 당신의 직관을 산업적 가치로 바꾸는 첫걸음이 될 것입니다.
+      {/* The Climax: Call to Action */}
+      <section className="reveal" style={{ textAlign: 'center', padding: '120px 0' }}>
+        <h2 style={{ fontSize: 'clamp(2.5rem, 8vw, 4rem)', marginBottom: '2.5rem', fontWeight: 900 }}>이 거대한 흐름의 <br /><span className="gradient-text">주인공이 되십시오.</span></h2>
+        <p className="narrative-p" style={{ maxWidth: '750px', margin: '0 auto 4rem', fontSize: '1.5rem', lineHeight: '1.6' }}>
+          당신의 직관이 산업의 가치가 되는 곳. <br />
+          <strong>&lsquo;바이브 코딩 모임&rsquo;</strong>에서 미래의 지형도를 함께 그려나갑시다. <br />
+          당신의 참여가 이 산업의 표준이 됩니다.
         </p>
-        
-        <div style={{ display: 'flex', gap: '20px', justifyContent: 'center' }}>
-          <button 
+
+        <div style={{ display: 'flex', gap: '24px', justifyContent: 'center' }}>
+          <button
             style={{
-              padding: '20px 40px',
-              fontSize: '1.2rem',
-              fontWeight: 700,
-              borderRadius: '50px',
+              padding: '24px 50px',
+              fontSize: '1.3rem',
+              fontWeight: 800,
+              borderRadius: '60px',
               border: 'none',
-              background: 'linear-gradient(135deg, #7000FF, #4f00b3)',
+              background: 'linear-gradient(135deg, var(--accent-primary), #4f00b3)',
               color: 'white',
               cursor: 'pointer',
-              boxShadow: '0 10px 30px rgba(112, 0, 255, 0.4)',
-              transition: 'transform 0.2s'
+              boxShadow: '0 15px 40px rgba(112, 0, 255, 0.5)',
+              transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)'
             }}
-            onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.05)')}
-            onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateY(-5px)';
+              e.currentTarget.style.boxShadow = '0 20px 50px rgba(112, 0, 255, 0.6)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = '0 15px 40px rgba(112, 0, 255, 0.5)';
+            }}
             onClick={() => alert('신청 페이지로 이동합니다. (준비 중)')}
           >
             모임 참여하기
           </button>
         </div>
-      </section >
+      </section>
 
-      <footer style={{ marginTop: '10vh', borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '50px', textAlign: 'center', color: 'rgba(255,255,255,0.4)' }}>
-        <p>&copy; 2026 Vibe Coding Industry Federation. All rights reserved.</p>
-        <p style={{ fontSize: '0.8rem', marginTop: '10px' }}>Created with Vibe & Next.js</p>
+      <footer style={{ marginTop: '10vh', borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '60px', textAlign: 'center', color: 'rgba(255,255,255,0.4)', paddingBottom: '40px' }}>
+        <p style={{ fontSize: '1rem', marginBottom: '8px' }}>&copy; 2026 Vibe Coding Industry Federation. All rights reserved.</p>
+        <p style={{ fontSize: '0.85rem' }}>Crafted with Vibe, Evidence, and Next.js</p>
       </footer>
 
       <style jsx>{`
+        .reveal {
+          opacity: 0;
+          transform: translateY(30px);
+          transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
         .reveal.active {
           opacity: 1;
           transform: translateY(0);
         }
       `}</style>
-    </div >
+    </div>
   );
 }
