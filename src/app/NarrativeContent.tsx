@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import FluidBackground from './FluidBackground';
 
 export default function NarrativeContent() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -84,6 +85,7 @@ export default function NarrativeContent() {
 
   return (
     <div style={{ perspective: '1000px' }}>
+      <FluidBackground />
       <div className="container" ref={containerRef} style={{ paddingTop: '20vh', paddingBottom: '20vh', position: 'relative' }}>
         <div className="bg-glow">
           <div className="glow-orb orb-1"></div>
@@ -204,6 +206,16 @@ export default function NarrativeContent() {
             이것을 다루는 능력은 이제 취미가 아닙니다. 산업의 생태계를 지배하는 가장 강력한 자본이 될 것입니다.
             우리는 이제 숙련공이 아닌, <strong>산업 전체를 조망하는 오케스트라의 지휘자</strong>가 되어야 합니다.
           </p>
+        </section>
+
+        {/* Partners/Tools Logos */}
+        <section className="reveal" style={{ marginBottom: '10vh', textAlign: 'center' }}>
+          <p style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.3)', marginBottom: '2rem', letterSpacing: '0.3em', fontWeight: 600 }}>POWERING THE INDUSTRY</p>
+          <div style={{ display: 'flex', gap: '60px', justifyContent: 'center', alignItems: 'center', opacity: 0.6, filter: 'grayscale(1) brightness(2)' }}>
+            <img src="/openai_logo.svg" alt="OpenAI" style={{ height: '35px' }} />
+            <img src="/claude_logo.svg" alt="Claude" style={{ height: '35px' }} />
+            <img src="/gemini_logo.webp" alt="Gemini" style={{ height: '35px' }} />
+          </div>
         </section>
 
         {/* The Digital Divide */}

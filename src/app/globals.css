@@ -78,12 +78,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'A2z', 'Noto Sans KR', sans-serif !important;
 }
 
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
-  font-family: var(--font-body);
   line-height: 1.8;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
@@ -233,8 +233,9 @@ h3 {
 }
 
 .narrative-p strong {
-  font-weight: 700;
+  font-weight: 800;
   color: var(--accent-secondary);
+  text-shadow: 0 0 10px rgba(0, 255, 209, 0.3);
 }
 
 .narrative-quote {
@@ -250,6 +251,20 @@ h3 {
 
 .section-spacing {
   margin-bottom: 25vh;
+  position: relative;
+}
+
+section::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(112, 0, 255, 0.03) 0%, transparent 70%);
+  z-index: -1;
+  pointer-events: none;
 }
 
 /* Mobile Optimizations */
