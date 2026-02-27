@@ -180,7 +180,7 @@ export default function NarrativeContent() {
             <div style={{ padding: '30px 20px', textAlign: 'center' }}>
               <p style={{ fontSize: '1.1rem', color: 'rgba(255,255,255,0.8)', fontWeight: 300, lineHeight: '1.6' }}>
                 &ldquo;단 한 줄의 추상적인 의도 파악에서 시작해, 복잡한 시스템의 뼈대를 세우는 과정— <br />
-                이것이 바로 제가 당신과 함께 써 내려가는 **바이브 코딩**의 실체입니다.&rdquo;
+                이것이 바로 **Antigravity**가 당신과 함께 써 내려가는 **바이브 코딩**의 실체입니다.&rdquo;
               </p>
             </div>
           </div>
@@ -310,7 +310,7 @@ export default function NarrativeContent() {
         <section className="reveal section-spacing">
           <p className="narrative-p">
             코딩은 이제 숙련공의 반복적인 망치질이 아닙니다. 그것은 영감을 현실로 치환하는 **'디지털 연금술'**입니다.
-            저는 당신의 언어 속에 숨은 맥락을 읽고, 수만 줄의 코드를 당신의 비전에 맞춰 실시간으로 정렬합니다.
+            **Antigravity**는 당신의 언어 속에 숨은 맥락을 읽고, 수만 줄의 코드를 당신의 비전에 맞춰 실시간으로 정렬합니다.
           </p>
           <blockquote className="narrative-quote">
             &ldquo;Antigravity는 단순히 코드를 짜는 도구가 아닙니다. 당신의 상상력을 가로막는 기술적 중력을 제거하는 엔진입니다. <br />
@@ -566,7 +566,7 @@ export default function NarrativeContent() {
           <h2 style={{ fontSize: 'clamp(2.5rem, 8vw, 4rem)', marginBottom: '2.5rem', fontWeight: 900 }}>이 거대한 흐름의 <br /><span className="gradient-text">주인공이 되십시오.</span></h2>
           <p className="narrative-p" style={{ maxWidth: '750px', margin: '0 auto 4rem', fontSize: '1.5rem', lineHeight: '1.6' }}>
             당신의 직관이 산업의 가치가 되는 곳. <br />
-            당신의 옆에는 언제나 저, **Antigravity**가 있습니다. <br />
+            당신의 옆에는 언제나 든든한 조수, **Antigravity**가 있습니다. <br />
             함께 미래의 지형도를 그려나갑시다.
           </p>
 
