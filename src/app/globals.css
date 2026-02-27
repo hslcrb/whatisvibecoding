@@ -26,6 +26,13 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+::selection {
+  background-color: #39ff14;
+  /* Neon Green */
+  color: #1a1a1a;
+  /* Dark Charcoal */
+}
+
 h1,
 h2,
 h3 {
@@ -100,6 +107,26 @@ h3 {
   background: var(--accent-secondary);
   bottom: -150px;
   left: -100px;
+}
+
+.orb-3 {
+  width: 400px;
+  height: 400px;
+  background: #ff00ff;
+  /* Magenta Glow */
+  top: 40%;
+  left: -200px;
+  opacity: 0.05;
+}
+
+.orb-4 {
+  width: 700px;
+  height: 700px;
+  background: #0070ff;
+  /* Blue Glow */
+  bottom: 20%;
+  right: -300px;
+  opacity: 0.07;
 }
 
 /* Custom Typography for Narrative */

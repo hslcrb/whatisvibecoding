@@ -26,7 +26,13 @@ export default function NarrativeContent() {
   }, []);
 
   return (
-    <div className="container" ref={containerRef} style={{ paddingTop: '20vh', paddingBottom: '20vh' }}>
+    <div className="container" ref={containerRef} style={{ paddingTop: '20vh', paddingBottom: '20vh', position: 'relative' }}>
+      <div className="bg-glow">
+        <div className="glow-orb orb-1"></div>
+        <div className="glow-orb orb-2"></div>
+        <div className="glow-orb orb-3"></div>
+        <div className="glow-orb orb-4"></div>
+      </div>
       {/* Intro: The Personal Hook */}
       <section className="reveal section-spacing">
         <h1 style={{ fontSize: 'clamp(3rem, 10vw, 5.5rem)', fontWeight: 900, marginBottom: '3rem' }}>
@@ -48,12 +54,15 @@ export default function NarrativeContent() {
         </p>
 
         <div className="glass-card" style={{ marginBottom: '4rem', borderLeft: '4px solid var(--accent-secondary)', textAlign: 'left' }}>
+          <div style={{ marginBottom: '2rem', background: 'rgba(255,255,255,0.05)', display: 'inline-block', padding: '10px 20px', borderRadius: '8px' }}>
+            <img src="/aitimes_logo.png" alt="AI Times" style={{ height: '30px', filter: 'brightness(0) invert(1)' }} />
+          </div>
           <h3 style={{ fontSize: '1.5rem', marginBottom: '1.5rem', color: 'var(--accent-secondary)' }}>Case Study: Spotify의 리얼 타임 혁명</h3>
           <p style={{ fontSize: '1.1rem', color: 'rgba(255,255,255,0.8)', lineHeight: '1.8', marginBottom: '1rem' }}>
             &ldquo;스포티파이의 일부 엔지니어는 <strong>작년 12월 이후 코드 한 줄도 직접 작성하지 않았습니다.</strong>&rdquo;
           </p>
           <p style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.5)', fontStyle: 'italic', marginBottom: '1.5rem' }}>
-            &mdash; AI타임스 보도 중 발췌
+            &mdash; <a href="https://www.aitimes.com/news/articleView.html?idxno=206906" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-secondary)', textDecoration: 'none', borderBottom: '1px solid currentColor' }}>AI타임스 보도 중 발췌 (기사 원문 보기)</a>
           </p>
           <div style={{ padding: '24px', background: 'rgba(0,0,0,0.4)', borderRadius: '16px', border: '1px solid rgba(255,255,255,0.05)' }}>
             <p style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.9)', lineHeight: '1.6' }}>
