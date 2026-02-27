@@ -616,9 +616,9 @@ export default function NarrativeContent() {
               <div>
                 <h5 style={{ color: '#fff', fontSize: '1.1rem', marginBottom: '24px' }}>Resources</h5>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                  <a href="/NOTICE.md" className="footer-link">공지사항</a>
-                  <a href="/CONTRIBUTING.md" className="footer-link">기여 가이드</a>
-                  <a href="/LICENSE" className="footer-link">라이선스 (MIT)</a>
+                  <Link href="/notice" className="footer-link">공지사항</Link>
+                  <Link href="/contributing" className="footer-link">기여 가이드</Link>
+                  <Link href="/license" className="footer-link">라이선스 (MIT)</Link>
                 </div>
               </div>
               <div>
