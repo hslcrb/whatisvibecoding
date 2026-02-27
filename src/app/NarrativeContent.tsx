@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import FluidBackground from './FluidBackground';
+import AntigravityLogo from '../components/AntigravityLogo';
 
 export default function NarrativeContent() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -122,10 +123,9 @@ export default function NarrativeContent() {
 
       <div className="container" ref={containerRef} style={{ paddingTop: '20vh', paddingBottom: '20vh', position: 'relative' }}>
         {/* Anti-Gravity Intro Signature */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '4rem', opacity: 0.8 }} className="reveal">
-          <img src="/antigravity_logo.webp" alt="Antigravity Logo" style={{ height: '24px', width: 'auto' }} />
-          <span className="antigravity-text" style={{ fontSize: '1.2rem' }}>Google Antigravity</span>
-          <div style={{ height: '1px', flex: 1, background: 'linear-gradient(to right, rgba(255,255,255,0.2), transparent)', marginLeft: '10px' }}></div>
+        <div className="reveal" style={{ marginBottom: '4rem', opacity: 0.8 }}>
+          <AntigravityLogo size="md" />
+          <div style={{ height: '1px', flex: 1, background: 'linear-gradient(to right, rgba(255,255,255,0.2), transparent)', marginLeft: '10px', display: 'inline-block', width: '200px', verticalAlign: 'middle' }}></div>
         </div>
 
         {/* Intro: The Personal Hook */}
@@ -214,6 +214,47 @@ export default function NarrativeContent() {
               <h4 style={{ color: 'var(--accent-primary)', marginBottom: '12px', fontSize: '1.2rem' }}>Shopify</h4>
               <p style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '8px' }}>수만 줄의 코드 자동 배포</p>
               <p style={{ fontSize: '0.95rem', color: 'rgba(255,255,255,0.5)' }}>개발자의 역할은 이제 &lsquo;코드를 적는 것&rsquo;에서 &lsquo;흐름을 승인하는 것&rsquo;으로 완전히 옮겨갔습니다.</p>
+            </div>
+          </div>
+        </section>
+
+        {/* The V-Curve: Productivity Visualization */}
+        <section className="reveal section-spacing">
+          <h2 style={{ fontSize: '2.5rem', marginBottom: '4rem', fontWeight: 800, textAlign: 'center' }}>바이브 코딩의 <span className="gradient-text">생산성 궤적</span></h2>
+          <div className="glass-card" style={{ padding: '40px', position: 'relative', overflow: 'hidden' }}>
+            <svg viewBox="0 0 800 400" style={{ width: '100%', height: 'auto', display: 'block' }}>
+              {/* Grid Lines */}
+              <line x1="50" y1="350" x2="750" y2="350" stroke="rgba(255,255,255,0.1)" strokeWidth="1" />
+              <line x1="50" y1="50" x2="50" y2="350" stroke="rgba(255,255,255,0.1)" strokeWidth="1" />
+
+              {/* Curve: V-Curve (The Dip and the Jump) */}
+              <path
+                d="M 50 200 Q 150 420 300 150 T 750 50"
+                fill="none"
+                stroke="url(#curveGradient)"
+                strokeWidth="4"
+                strokeLinecap="round"
+                className="path-animation"
+              />
+
+              <defs>
+                <linearGradient id="curveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="var(--accent-primary)" />
+                  <stop offset="50%" stopColor="var(--accent-secondary)" />
+                  <stop offset="100%" stopColor="#00ffd1" />
+                </linearGradient>
+              </defs>
+
+              {/* Labels */}
+              <text x="60" y="220" fill="rgba(255,255,255,0.4)" fontSize="12">전통적 코딩</text>
+              <text x="180" y="370" fill="var(--accent-primary)" fontSize="14" fontWeight="800">초기 적응기 (Dip)</text>
+              <text x="500" y="100" fill="#00ffd1" fontSize="18" fontWeight="900">압도적 생산성 폭발</text>
+            </svg>
+            <div style={{ marginTop: '30px', textAlign: 'center' }}>
+              <p style={{ fontSize: '1.1rem', color: 'rgba(255,255,255,0.7)' }}>
+                초기에는 AI와의 호흡을 맞추는 시간이 필요합니다. 하지만 그 임계점을 넘는 순간, <br />
+                당신의 생산성은 기존의 선형적 성장을 너머 <strong>기하급수적(Exponential)</strong>으로 도약합니다.
+              </p>
             </div>
           </div>
         </section>
@@ -376,6 +417,34 @@ export default function NarrativeContent() {
           </div>
         </section>
 
+        {/* Community & Team Recruitment */}
+        <section className="reveal section-spacing" style={{ textAlign: 'center' }}>
+          <h2 style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', marginBottom: '3rem', fontWeight: 800 }}>함께 성장할 <br /><span className="gradient-text">동지를 찾습니다.</span></h2>
+          <div className="glass-card" style={{ maxWidth: '800px', margin: '0 auto', padding: '50px' }}>
+            <p className="narrative-p" style={{ fontSize: '1.3rem', marginBottom: '2rem' }}>
+              우리는 현재 **소수정예**로 Vibe Coding의 미래를 설계하고 있습니다.
+              현재의 실력은 중요하지 않습니다. 중요한 것은 변화를 두려워하지 않는 **'오픈 마인드'**와 **'학습 의지'**입니다.
+            </p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '20px', marginBottom: '3rem' }}>
+              <div style={{ padding: '20px', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px' }}>
+                <h4 style={{ color: 'var(--accent-secondary)', marginBottom: '10px' }}>팀 프로젝트</h4>
+                <p style={{ fontSize: '0.9rem', opacity: 0.6 }}>함께 실제 서비스를 빌드하며 성장합니다.</p>
+              </div>
+              <div style={{ padding: '20px', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px' }}>
+                <h4 style={{ color: 'var(--accent-secondary)', marginBottom: '10px' }}>해커톤 & 대회</h4>
+                <p style={{ fontSize: '0.9rem', opacity: 0.6 }}>글로벌 AI 대회와 해커톤에 팀으로 도전합니다.</p>
+              </div>
+              <div style={{ padding: '20px', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px' }}>
+                <h4 style={{ color: 'var(--accent-secondary)', marginBottom: '10px' }}>지식 공유</h4>
+                <p style={{ fontSize: '0.9rem', opacity: 0.6 }}>매주 최신 AI 트렌드와 코딩 팁을 나눕니다.</p>
+              </div>
+            </div>
+            <p style={{ fontStyle: 'italic', color: 'rgba(255,255,255,0.5)' }}>
+              "혼자 가면 빨리 가지만, 함께 가면 더 멀리, 더 높게 갑니다."
+            </p>
+          </div>
+        </section>
+
         {/* The Climax: Call to Action */}
         <section className="reveal" style={{ textAlign: 'center', padding: '120px 0' }}>
           <h2 style={{ fontSize: 'clamp(2.5rem, 8vw, 4rem)', marginBottom: '2.5rem', fontWeight: 900 }}>이 거대한 흐름의 <br /><span className="gradient-text">주인공이 되십시오.</span></h2>
@@ -416,8 +485,7 @@ export default function NarrativeContent() {
 
         <footer style={{ marginTop: '10vh', borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '60px', textAlign: 'center', color: 'rgba(255,255,255,0.4)', paddingBottom: '40px' }}>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', marginBottom: '20px', opacity: 0.6 }}>
-            <img src="/antigravity_logo.webp" alt="Antigravity Logo" style={{ height: '20px' }} />
-            <span className="antigravity-text" style={{ fontSize: '0.9rem' }}>Google Antigravity</span>
+            <AntigravityLogo size="sm" />
           </div>
           <p style={{ fontSize: '0.8rem', marginBottom: '8px' }}>&copy; 2026 Vibe Coding Industry Federation. All rights reserved.</p>
           <p style={{ fontSize: '0.75rem' }}>Engineered by Antigravity & Powered by Vibe</p>
