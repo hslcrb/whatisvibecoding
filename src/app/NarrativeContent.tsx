@@ -340,30 +340,33 @@ export default function NarrativeContent() {
         {/* Benchmarks Section */}
         <section className="reveal section-spacing">
           <h2 style={{ fontSize: 'clamp(2rem, 5vw, 2.8rem)', marginBottom: '4rem', fontWeight: 900, textAlign: 'center' }}>
-            차세대 <span className="gradient-text">지능 지표</span> <br />
-            <span style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.4)', fontWeight: 400, letterSpacing: '0.2em' }}>FEBRUARY 2026 FRONTIER BENCHMARKS</span>
+            차세대 <span className="gradient-text">코딩 지능 지표</span> <br />
+            <span style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.4)', fontWeight: 400, letterSpacing: '0.2em' }}>FEBRUARY 2026 SOFTWARE ENGINEERING BENCHMARKS</span>
           </h2>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '30px' }}>
-            <div className="glass-card" style={{ padding: '40px' }}>
-              <div className="benchmark-badge" style={{ marginBottom: '20px' }}>REASONING KING</div>
+            <div className="glass-card" style={{ padding: '40px', position: 'relative' }}>
+              <div className="benchmark-badge" style={{ marginBottom: '20px' }}>LOGIC MASTER</div>
               <h3 style={{ fontSize: '1.8rem', marginBottom: '10px', fontWeight: 900 }}>Gemini <span style={{ color: 'var(--accent-secondary)' }}>3.1 Pro</span></h3>
-              <div style={{ fontSize: '3.5rem', fontWeight: 900, marginBottom: '20px', color: '#fff' }}>94.3<span style={{ fontSize: '1.2rem', color: 'rgba(255,255,255,0.4)' }}>%</span></div>
-              <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.95rem' }}>GPQA Diamond (Graduate-level Reasoning)</p>
+              <div style={{ fontSize: '3.5rem', fontWeight: 900, marginBottom: '20px', color: '#fff' }}>98.2<span style={{ fontSize: '1.2rem', color: 'rgba(255,255,255,0.4)' }}>%</span></div>
+              <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.95rem', marginBottom: '1.5rem' }}>HumanEval+ (Python Coding Logic)</p>
+              <a href="https://deepmind.google/technologies/gemini/" target="_blank" rel="noopener noreferrer" style={{ fontSize: '0.75rem', color: 'var(--accent-secondary)', textDecoration: 'none', fontWeight: 700, border: '1px solid rgba(0, 255, 209, 0.2)', padding: '6px 12px', borderRadius: '4px' }}>VIEW REPORT</a>
             </div>
 
-            <div className="glass-card" style={{ padding: '40px' }}>
-              <div className="benchmark-badge" style={{ marginBottom: '20px' }}>CODING SPECIALIST</div>
+            <div className="glass-card" style={{ padding: '40px', position: 'relative' }}>
+              <div className="benchmark-badge" style={{ marginBottom: '20px' }}>PRODUCTION CORE</div>
               <h3 style={{ fontSize: '1.8rem', marginBottom: '10px', fontWeight: 900 }}>Codex <span style={{ color: 'var(--accent-primary)' }}>5.3</span></h3>
-              <div style={{ fontSize: '3.5rem', fontWeight: 900, marginBottom: '20px', color: '#fff' }}>77.3<span style={{ fontSize: '1.2rem', color: 'rgba(255,255,255,0.4)' }}>%</span></div>
-              <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.95rem' }}>Terminal-Bench 2.0 (Agentic Execution)</p>
+              <div style={{ fontSize: '3.5rem', fontWeight: 900, marginBottom: '20px', color: '#fff' }}>92.5<span style={{ fontSize: '1.2rem', color: 'rgba(255,255,255,0.4)' }}>%</span></div>
+              <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.95rem', marginBottom: '1.5rem' }}>SWE-Bench Lite (Issue Resolution)</p>
+              <a href="https://openai.com/index/research/" target="_blank" rel="noopener noreferrer" style={{ fontSize: '0.75rem', color: 'var(--accent-primary)', textDecoration: 'none', fontWeight: 700, border: '1px solid rgba(112, 0, 255, 0.2)', padding: '6px 12px', borderRadius: '4px' }}>VIEW REPORT</a>
             </div>
 
-            <div className="glass-card" style={{ padding: '40px' }}>
-              <div className="benchmark-badge" style={{ marginBottom: '20px' }}>AGENTIC MASTER</div>
+            <div className="glass-card" style={{ padding: '40px', position: 'relative' }}>
+              <div className="benchmark-badge" style={{ marginBottom: '20px' }}>AUTONOMOUS PRO</div>
               <h3 style={{ fontSize: '1.8rem', marginBottom: '10px', fontWeight: 900 }}>Claude <span style={{ color: '#ff6b6b' }}>Opus 4.6</span></h3>
-              <div style={{ fontSize: '3.5rem', fontWeight: 900, marginBottom: '20px', color: '#fff' }}>80.2<span style={{ fontSize: '1.2rem', color: 'rgba(255,255,255,0.4)' }}>%</span></div>
-              <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.95rem' }}>SWE-Bench Verified (Full Engineering Cycle)</p>
+              <div style={{ fontSize: '3.5rem', fontWeight: 900, marginBottom: '20px', color: '#fff' }}>81.4<span style={{ fontSize: '1.2rem', color: 'rgba(255,255,255,0.4)' }}>%</span></div>
+              <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.95rem', marginBottom: '1.5rem' }}>SWE-Bench Verified (Full Cycle)</p>
+              <a href="https://www.anthropic.com/news/" target="_blank" rel="noopener noreferrer" style={{ fontSize: '0.75rem', color: '#ff6b6b', textDecoration: 'none', fontWeight: 700, border: '1px solid rgba(255, 107, 107, 0.2)', padding: '6px 12px', borderRadius: '4px' }}>VIEW REPORT</a>
             </div>
           </div>
         </section>
