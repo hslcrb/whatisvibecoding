@@ -681,10 +681,6 @@ export default function NarrativeContent() {
                     <img src="/rheehose.svg" alt="" style={{ height: '14px', filter: 'brightness(0) invert(1)', opacity: 0.7 }} />
                     <span style={{ fontSize: '0.9rem', color: '#fff', fontWeight: 600 }}>My Site</span>
                   </a>
-                  <div style={{ marginTop: '8px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                    <a href="#" className="footer-link" style={{ fontSize: '0.85rem' }}>Discord Server</a>
-                    <a href="#" className="footer-link" style={{ fontSize: '0.85rem' }}>Neural Network (Beta)</a>
-                  </div>
                 </div>
               </div>
             </div>
