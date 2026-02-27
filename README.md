@@ -40,4 +40,4 @@ npm run build
 - [라이선스 (LICENSE)](./LICENSE)
 
 ---
-© 2026 Vibe Coding Industry Federation. All rights reserved.
+© 2008-2026 Rheehose (Rhee Creative). All rights reserved.

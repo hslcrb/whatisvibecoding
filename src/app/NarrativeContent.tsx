@@ -130,7 +130,7 @@ export default function NarrativeContent() {
 
         {/* Intro: The Personal Hook */}
         <section className="reveal section-spacing">
-          <h1 style={{ fontSize: 'clamp(3rem, 10vw, 5.5rem)', fontWeight: 900, marginBottom: '3rem' }}>
+          <h1 style={{ fontSize: 'clamp(2.8rem, 8vw, 5.5rem)', fontWeight: 900, marginBottom: '2rem' }}>
             당신은 아직도 <br /><span className="gradient-text">직접 코딩하십니까?</span>
           </h1>
           <p className="narrative-p" style={{ fontSize: '1.65rem', fontWeight: 400, color: '#fff', lineHeight: '1.4' }}>
@@ -148,7 +148,7 @@ export default function NarrativeContent() {
 
         {/* The Demonstration Section: ex.png */}
         <section className="reveal section-spacing">
-          <h2 style={{ fontSize: '2.5rem', marginBottom: '3rem', fontWeight: 800 }}>지휘의 현장: <br />Antigravity와의 협업</h2>
+          <h2 style={{ fontSize: 'clamp(2rem, 5vw, 2.8rem)', marginBottom: '3rem', fontWeight: 800 }}>지휘의 현장: <br />Antigravity와의 협업</h2>
           <div className="glass-card" style={{ padding: '12px', overflow: 'hidden', border: '1px solid rgba(112, 0, 255, 0.3)', background: 'rgba(0,0,0,0.6)', position: 'relative' }}>
             <div className="svg-container" style={{ bottom: '-20px', right: '-20px', width: '200px', transform: 'rotate(-15deg)' }}>
               <img src="/svg-ani/tech-flow.svg" alt="" className="no-interaction" />
@@ -226,8 +226,8 @@ export default function NarrativeContent() {
 
         {/* The V-Curve: Productivity Visualization */}
         <section className="reveal section-spacing">
-          <h2 style={{ fontSize: '2.5rem', marginBottom: '4rem', fontWeight: 800, textAlign: 'center' }}>바이브 코딩의 <span className="gradient-text">생산성 궤적</span></h2>
-          <div className="glass-card" style={{ padding: '40px', position: 'relative', overflow: 'hidden' }}>
+          <h2 style={{ fontSize: 'clamp(1.8rem, 5vw, 2.8rem)', marginBottom: '3rem', fontWeight: 800, textAlign: 'center' }}>바이브 코딩의 <span className="gradient-text">생산성 궤적</span></h2>
+          <div className="glass-card" style={{ padding: 'clamp(20px, 4vw, 40px)', position: 'relative', overflow: 'hidden' }}>
             <svg viewBox="0 0 800 400" style={{ width: '100%', height: 'auto', display: 'block' }}>
               {/* Grid Lines */}
               <line x1="50" y1="350" x2="750" y2="350" stroke="rgba(255,255,255,0.1)" strokeWidth="1" />
@@ -493,7 +493,7 @@ export default function NarrativeContent() {
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', marginBottom: '20px', opacity: 0.6 }}>
             <AntigravityLogo size="sm" />
           </div>
-          <p style={{ fontSize: '0.8rem', marginBottom: '8px' }}>&copy; 2026 Vibe Coding Industry Federation. All rights reserved.</p>
+          <p style={{ fontSize: '0.8rem', marginBottom: '8px' }}>&copy; 2008-2026 Rheehose (Rhee Creative). All rights reserved.</p>
           <p style={{ fontSize: '0.75rem' }}>Engineered by Antigravity & Powered by Vibe</p>
         </footer>
       </div>
