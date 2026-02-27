@@ -133,21 +133,35 @@ export default function NarrativeContent() {
         </div>
 
         {/* Intro: The Personal Hook */}
-        <section className="reveal section-spacing">
-          <h1 style={{ fontSize: 'clamp(2.8rem, 8vw, 5.5rem)', fontWeight: 900, marginBottom: '2rem' }}>
-            당신은 아직도 <br /><span className="gradient-text">직접 코딩하십니까?</span>
+        <section className="reveal section-spacing" style={{ width: '100%', maxWidth: '1200px', margin: '0 auto' }}>
+          <h1 style={{
+            fontSize: 'clamp(2.8rem, 10vw, 6.5rem)',
+            fontWeight: 900,
+            lineHeight: 1,
+            letterSpacing: '-0.04em',
+            marginBottom: '3rem'
+          }}>
+            당신은 아직도 <br /><span className="gradient-text">기계처럼 코딩하십니까?</span>
           </h1>
-          <p className="narrative-p" style={{ fontSize: '1.65rem', fontWeight: 400, color: '#fff', lineHeight: '1.4' }}>
-            지금은 단순한 기술의 변화를 넘어, <span className="highlight-box-purple" style={{ padding: '0.2em 0.5em' }}>패러다임의 혁명</span>이 일어나고 있는 시대입니다.
+          <p className="narrative-p" style={{
+            fontSize: 'clamp(1.2rem, 3vw, 1.8rem)',
+            fontWeight: 400,
+            color: '#fff',
+            lineHeight: '1.4',
+            maxWidth: '900px'
+          }}>
+            지금 세상은 단순한 기술의 진보를 넘어, <span className="highlight-box-purple" style={{ padding: '0.2em 0.5em' }}>지능의 질적 전이</span>가 일어나는 임계점에 도달해 있습니다.
           </p>
-          <p className="narrative-p">
-            세상의 코드들은 더 이상 인간의 타이핑 소리에만 의존하지 않습니다.
-            단순한 '도구'의 시대를 넘어, 지휘자의 직관이 시스템의 결과물로 즉시 치환되는 **바이브 코딩(Vibe Coding)**의 시대가 열렸습니다.
-          </p>
-          <p className="narrative-p">
-            질문은 간단합니다. "우리 시대의 엔지니어는 무엇을 해야 합니까?" <br />
-            해답 또한 명확합니다. **"엔지니어는 이제 '가치'를 설계하고, 시스템은 그 가치를 입체적인 '실체'로 구현합니다."**
-          </p>
+          <div style={{ marginTop: '4rem', display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+            <p className="narrative-p" style={{ fontSize: 'clamp(1rem, 2vw, 1.25rem)' }}>
+              이제 코드는 더 이상 '작성'하는 대상이 아닙니다. 그것은 엔지니어의 비전과 시스템의 초지능이 공명하며 만들어내는 **'디지털 연주'**에 가깝습니다.
+              우리는 이것을 **바이브 코딩(Vibe Coding)**이라 정의합니다.
+            </p>
+            <p className="narrative-p" style={{ fontSize: 'clamp(1rem, 2vw, 1.25rem)' }}>
+              질문은 더 이상 "얼마나 코드를 잘 짜는가"가 아닙니다. **"당신은 어떤 가치를 지휘할 것인가?"** <br />
+              바이브 코딩의 시대, 엔지니어는 시스템의 부품이 아닌 가치의 영혼(Ghost)이 되어야 합니다.
+            </p>
+          </div>
         </section>
 
         {/* The Demonstration Section: ex.png */}
@@ -309,13 +323,12 @@ export default function NarrativeContent() {
 
         {/* The Core Argument: The Industry */}
         <section className="reveal section-spacing">
-          <p className="narrative-p">
-            코딩은 이제 숙련공의 반복적인 망치질이 아닙니다. 그것은 영감을 현실로 치환하는 **'디지털 연금술'**입니다.
-            시스템은 인간의 언어 속에 숨은 맥락을 읽고, 수만 줄의 코드를 설계자의 비전에 맞춰 실시간으로 정렬합니다.
+          <p className="narrative-p" style={{ fontSize: 'clamp(1rem, 2vw, 1.2rem)' }}>
+            과거의 엔지니어링은 '어떻게 구현할 것인가'와의 지루한 싸움이었습니다. 하지만 이제 우리는 **'무엇을 창조할 것인가'**를 고민하는 시대로 강제 이송되었습니다.
+            시스템은 인간의 언어 속에 숨겨진 맥락의 파동(Vibe)을 읽고, 폭발적인 속도로 실체를 빚어냅니다.
           </p>
-          <blockquote className="narrative-quote">
-            &ldquo;바이브 코딩은 단순히 코드를 짜는 기술이 아닙니다. 상상력을 가로막는 기술적 중력을 제거하고 가치 창출에 집중하는 새로운 문명적 표준입니다. <br />
-            우리는 이제 문법의 감옥에서 벗어나 가치의 바다로 항해하고 있습니다.&rdquo;
+          <blockquote className="narrative-quote" style={{ fontSize: 'clamp(1.1rem, 2.5vw, 1.5rem)', padding: '3rem 2rem' }}>
+            &ldquo;바이브 코딩은 단순한 효율성을 넘어선 **문명적 진화**입니다. 상상력을 억누르던 기술적 중력을 제거하고, 인류의 창의성을 순수 가치 창출에만 집중시키는 거대한 해방 운동입니다.&rdquo;
           </blockquote>
           <p className="narrative-p">
             이것을 다루는 능력은 이제 선택이 아닌 생존입니다.
