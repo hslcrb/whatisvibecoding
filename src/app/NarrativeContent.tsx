@@ -93,6 +93,37 @@ export default function NarrativeContent() {
         </div>
       </section>
 
+      {/* Economic & Industrial Logic */}
+      <section className="reveal section-spacing">
+        <h2 style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', marginBottom: '3.5rem', fontWeight: 800 }}>왜 기업들은 <br />사활을 걸고 있습니까?</h2>
+        <p className="narrative-p">
+          구글, 마이크로소프트, 오픈AI—이들이 거액의 자본을 쏟아붓는 이유는 단순히 기술적 자부심 때문이 아닙니다.
+          LLM 모델을 직접 개발하지 않는 일반 기업들조차 너도나도 AI를 자사 시스템에 통합하는 이유는 명확합니다.
+          그것은 <strong>이윤, 효율, 그리고 생존</strong>의 문제이기 때문입니다.
+        </p>
+        <div className="glass-card" style={{ textAlign: 'left', marginBottom: '3rem' }}>
+          <p style={{ fontSize: '1.2rem', lineHeight: '1.8' }}>
+            &ldquo;이것은 단순한 화제가 아닙니다. 산업계에서 <strong>돈이 되고, 돈을 벌어다 주는 실체</strong>입니다.
+            생산 비용을 절반으로 줄이면서 출시 속도를 세 배로 높일 수 있는 기술을 외면할 리더는 없습니다.
+            AI는 이제 비즈니스의 부가 요소가 아니라 <strong>엔진 그 자체</strong>가 되고 있습니다.&rdquo;
+          </p>
+        </div>
+      </section>
+
+      {/* Security Paradox */}
+      <section className="reveal section-spacing">
+        <h2 style={{ fontSize: '2.5rem', marginBottom: '3rem', fontWeight: 800 }}>보안의 역설: <br />인간은 완벽한가요?</h2>
+        <p className="narrative-p">
+          흔히 AI 코딩의 보안을 우려합니다. 하지만 냉정하게 자문해 봅시다.
+          인간 개발자는 코드를 짤 때 처음부터 보안을 완벽하게 고려하나요?
+          수많은 해킹과 데이터 유출 사고는 AI가 아닌 <strong>인간의 부주의와 형식적인 보안 검토</strong>에서 비롯되었습니다.
+        </p>
+        <p className="narrative-p">
+          AI는 오히려 인간보다 더 성실하게 보안 표준을 학습하고 적용할 수 있습니다.
+          중요한 것은 도구의 결함이 아니라, 그 <strong>도구를 검증하고 통제하는 지휘자의 역량</strong>입니다.
+        </p>
+      </section>
+
       {/* The Core Argument: The Industry */}
       <section className="reveal section-spacing">
         <blockquote className="narrative-quote">
@@ -105,6 +136,21 @@ export default function NarrativeContent() {
         <p className="narrative-p">
           이것을 다루는 능력은 이제 취미가 아닙니다. 산업의 생태계를 지배하는 가장 강력한 자본이 될 것입니다.
           우리는 이제 숙련공이 아닌, <strong>산업 전체를 조망하는 오케스트라의 지휘자</strong>가 되어야 합니다.
+        </p>
+      </section>
+
+      {/* The Digital Divide */}
+      <section className="reveal section-spacing">
+        <h2 style={{ fontSize: '2.5rem', marginBottom: '3.5rem', fontWeight: 800 }}>가속화되는 <br /><span className="gradient-text">양극화의 파도</span></h2>
+        <p className="narrative-p">
+          이제 세상은 두 부류로 나뉠 것입니다.
+          AI를 단순한 채팅방의 비서로 사용하는 자와, <strong>AI를 산업적 생산 수단으로 완전히 내재화한 자</strong>.
+          이들의 격차는 시간이 갈수록 기하급수적으로 벌어질 것이며, 이것은 곧 <strong>디지털 계급의 양극화</strong>로 이어질 것입니다.
+        </p>
+        <p className="narrative-p">
+          AI의 성능은 소프트웨어의 알고리즘만큼이나, 그것을 <strong>사용하는 사람의 실력</strong>에 의해 결정됩니다.
+          같은 악기를 들어도 연주자에 따라 소음이 되기도, 명곡이 되기도 하듯
+          당신의 '바이브'가 이 산업의 퀄리티를 결정합니다.
         </p>
       </section>
 
