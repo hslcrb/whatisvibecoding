@@ -149,8 +149,11 @@ export default function NarrativeContent() {
         {/* The Demonstration Section: ex.png */}
         <section className="reveal section-spacing">
           <h2 style={{ fontSize: '2.5rem', marginBottom: '3rem', fontWeight: 800 }}>지휘의 현장: <br />Antigravity와의 협업</h2>
-          <div className="glass-card" style={{ padding: '12px', overflow: 'hidden', border: '1px solid rgba(112, 0, 255, 0.3)', background: 'rgba(0,0,0,0.6)' }}>
-            <img src="/ex.png" alt="Antigravity Demonstration" style={{ width: '100%', height: 'auto', borderRadius: '16px', display: 'block' }} />
+          <div className="glass-card" style={{ padding: '12px', overflow: 'hidden', border: '1px solid rgba(112, 0, 255, 0.3)', background: 'rgba(0,0,0,0.6)', position: 'relative' }}>
+            <div className="svg-container" style={{ bottom: '-20px', right: '-20px', width: '200px', transform: 'rotate(-15deg)' }}>
+              <img src="/svg-ani/tech-flow.svg" alt="" className="no-interaction" />
+            </div>
+            <img src="/ex.webp" alt="Antigravity Demonstration" className="no-interaction" style={{ width: '100%', height: 'auto', borderRadius: '16px', display: 'block' }} />
             <div style={{ padding: '30px 20px', textAlign: 'center' }}>
               <p style={{ fontSize: '1.1rem', color: 'rgba(255,255,255,0.8)', fontWeight: 300, lineHeight: '1.6' }}>
                 &ldquo;단 한 줄의 추상적인 의도 파악에서 시작해, 복잡한 시스템의 뼈대를 세우는 과정— <br />
@@ -189,6 +192,9 @@ export default function NarrativeContent() {
             </div>
           </div>
 
+          <div className="svg-container" style={{ top: '10%', right: '-50px' }}>
+            <img src="/svg-ani/pulse-node.svg" alt="" className="no-interaction" style={{ width: '150px' }} />
+          </div>
           <p className="narrative-p">
             이것은 단순히 &lsquo;대변인&rsquo;을 두는 것이 아닙니다.
             인간의 고차원적인 <strong>&lsquo;비전(Vision)&rsquo;</strong>과 AI의 무한한 <strong>&lsquo;실행력(Execution)&rsquo;</strong>이 결합되는

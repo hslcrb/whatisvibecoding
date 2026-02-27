@@ -1,0 +1,37 @@
+<svg width="400" height="200" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .line {
+      fill: none;
+      stroke: #7000FF;
+      stroke-width: 2;
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      animation: draw 4s linear infinite;
+      opacity: 0.5;
+    }
+    .particle {
+      fill: #00FFD1;
+      animation: move 4s linear infinite;
+    }
+    @keyframes draw {
+      to { stroke-dashoffset: 0; }
+    }
+    @keyframes move {
+      0% { offset-distance: 0%; }
+      100% { offset-distance: 100%; }
+    }
+  </style>
+  <path id="path1" class="line" d="M0,100 Q100,50 200,100 T400,100" />
+  <circle r="3" class="particle">
+    <animateMotion dur="4s" repeatCount="indefinite">
+      <mpath href="#path1"/>
+    </animateMotion>
+  </circle>
+  
+  <path id="path2" class="line" d="M0,150 Q100,100 200,150 T400,150" style="animation-delay: -2s; stroke: #00FFD1;" />
+  <circle r="3" class="particle" style="fill: #7000FF;">
+    <animateMotion dur="4s" begin="-2s" repeatCount="indefinite">
+      <mpath href="#path2"/>
+    </animateMotion>
+  </circle>
+</svg>
