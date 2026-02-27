@@ -620,10 +620,67 @@ export default function NarrativeContent() {
               </div>
               <div>
                 <h5 style={{ color: '#fff', fontSize: '1.1rem', marginBottom: '24px' }}>Community</h5>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                  <a href="#" className="footer-link">GitHub Enterprise</a>
-                  <a href="#" className="footer-link">Discord Server</a>
-                  <a href="#" className="footer-link">Neural Network (Beta)</a>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                  <a
+                    href="https://github.com/hslcrb/whatisvibecoding"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="glass-card"
+                    style={{
+                      padding: '12px 20px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '12px',
+                      textDecoration: 'none',
+                      margin: 0,
+                      background: 'rgba(255,255,255,0.03)',
+                      border: '1px solid rgba(255,255,255,0.1)',
+                      transition: 'all 0.3s ease'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.background = 'rgba(255,255,255,0.08)';
+                      e.currentTarget.style.borderColor = 'var(--accent-secondary)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.background = 'rgba(255,255,255,0.03)';
+                      e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)';
+                    }}
+                  >
+                    <img src="/openai_logo.svg" alt="" style={{ height: '16px', filter: 'brightness(0) invert(1)', opacity: 0.7 }} />
+                    <span style={{ fontSize: '0.9rem', color: '#fff', fontWeight: 600 }}>GitHub</span>
+                  </a>
+                  <a
+                    href="https://rheehose.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="glass-card"
+                    style={{
+                      padding: '12px 20px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '12px',
+                      textDecoration: 'none',
+                      margin: 0,
+                      background: 'rgba(255,255,255,0.03)',
+                      border: '1px solid rgba(255,255,255,0.1)',
+                      transition: 'all 0.3s ease'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.background = 'rgba(255,255,255,0.08)';
+                      e.currentTarget.style.borderColor = 'var(--accent-primary)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.background = 'rgba(255,255,255,0.03)';
+                      e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)';
+                    }}
+                  >
+                    <img src="/rheehose.svg" alt="" style={{ height: '14px', filter: 'brightness(0) invert(1)', opacity: 0.7 }} />
+                    <span style={{ fontSize: '0.9rem', color: '#fff', fontWeight: 600 }}>My Site</span>
+                  </a>
+                  <div style={{ marginTop: '8px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                    <a href="#" className="footer-link" style={{ fontSize: '0.85rem' }}>Discord Server</a>
+                    <a href="#" className="footer-link" style={{ fontSize: '0.85rem' }}>Neural Network (Beta)</a>
+                  </div>
                 </div>
               </div>
             </div>
