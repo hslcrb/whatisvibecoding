@@ -1,6 +1,5 @@
 # 바이브 코딩 (Vibe Coding)
 
-![Vibe Coding Hero](https://github.com/hslcrb/whatisvibecoding/raw/main/public/vibe_coding_hero.png)
 ![Website Preview](https://github.com/hslcrb/whatisvibecoding/raw/main/public/website.webp)
 
 > **"코딩은 이제 타이핑이 아니라 '바이브'입니다."**
