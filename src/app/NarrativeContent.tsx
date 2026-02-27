@@ -165,37 +165,73 @@ export default function NarrativeContent() {
         </section>
 
         {/* The Demonstration Section: ex.png */}
-        <section className="reveal section-spacing">
-          <h2 style={{ fontSize: 'clamp(2rem, 5vw, 2.8rem)', marginBottom: '3rem', fontWeight: 800 }}>지원의 현장: <br />Antigravity 엔진과의 협업</h2>
+        <section className="reveal section-spacing" style={{ width: '100%', maxWidth: '1400px', margin: '0 auto' }}>
+          <h2 style={{ fontSize: 'clamp(2rem, 5vw, 3.2rem)', marginBottom: '3.5rem', fontWeight: 900, lineHeight: 1.1 }}>
+            창조의 중력을 거스르는 <br /><span className="gradient-text">현장의 바이브.</span>
+          </h2>
           <div
             className="glass-card img-protect"
             style={{
-              padding: '12px',
+              padding: '16px',
               overflow: 'hidden',
-              border: '1px solid rgba(112, 0, 255, 0.3)',
-              background: 'rgba(0,0,0,0.6)',
+              border: '1px solid rgba(112, 0, 255, 0.2)',
+              background: 'rgba(5, 5, 5, 0.4)',
               position: 'relative',
+              borderRadius: '24px',
+              boxShadow: '0 40px 100px rgba(0,0,0,0.6)',
               userSelect: 'none',
               WebkitUserSelect: 'none'
             }}
             onContextMenu={(e) => e.preventDefault()}
           >
-            <div className="svg-container" style={{ bottom: '-20px', right: '-20px', width: '200px', transform: 'rotate(-15deg)' }}>
+            <div className="svg-container" style={{ bottom: '-40px', right: '-40px', width: '300px', opacity: 0.15, transform: 'rotate(-10deg)', mixBlendMode: 'screen' }}>
               <img src="/svg-ani/tech-flow.svg" alt="" className="no-interaction" />
             </div>
-            <img
-              src="/ex.webp"
-              alt="Antigravity Demonstration"
-              className="no-interaction"
-              style={{ width: '100%', height: 'auto', borderRadius: '16px', display: 'block' }}
-              onContextMenu={(e) => e.preventDefault()}
-              onDragStart={(e) => e.preventDefault()}
-              draggable="false"
-            />
-            <div style={{ padding: '30px 20px', textAlign: 'center' }}>
-              <p style={{ fontSize: '1.1rem', color: 'rgba(255,255,255,0.8)', fontWeight: 300, lineHeight: '1.6' }}>
-                &ldquo;추상적인 설계 의도에서 시작해, 복잡한 시스템의 아키텍처를 세우는 과정— <br />
-                이것이 바로 현대적 IDE 환경에서 실현되는 **바이브 코딩**의 실제 현장입니다.&rdquo;
+
+            <div style={{ position: 'relative', borderRadius: '16px', overflow: 'hidden' }}>
+              <img
+                src="/ex.webp"
+                alt="Vibe Coding IDE Session"
+                className="no-interaction"
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                  display: 'block',
+                  filter: 'contrast(1.05) brightness(1.1)'
+                }}
+                onContextMenu={(e) => e.preventDefault()}
+                onDragStart={(e) => e.preventDefault()}
+                draggable="false"
+              />
+              <div style={{
+                position: 'absolute',
+                top: '20px',
+                right: '20px',
+                background: 'rgba(0,0,0,0.7)',
+                backdropFilter: 'blur(10px)',
+                padding: '8px 16px',
+                borderRadius: '8px',
+                border: '1px solid rgba(255,255,255,0.1)',
+                fontSize: '0.7rem',
+                color: 'var(--accent-secondary)',
+                fontWeight: 600,
+                letterSpacing: '0.1em'
+              }}>
+                SYNTHESIS ENGINE ACTIVE
+              </div>
+            </div>
+
+            <div style={{ padding: '50px 30px', textAlign: 'center' }}>
+              <p style={{
+                fontSize: 'clamp(1rem, 1.8vw, 1.3rem)',
+                color: 'rgba(255,255,255,0.9)',
+                fontWeight: 300,
+                lineHeight: '1.7',
+                maxWidth: '800px',
+                margin: '0 auto'
+              }}>
+                &ldquo;코딩은 더 이상 텍스트의 나열이 아닙니다. 그것은 설계자의 순수한 **의지(Intent)**가
+                초지능의 파동을 타고 **동작하는 실체**로 변이되는 경이로운 순간입니다.&rdquo;
               </p>
             </div>
           </div>
@@ -580,11 +616,20 @@ export default function NarrativeContent() {
           <div className="svg-container" style={{ top: '0', left: '50%', transform: 'translateX(-50%)', opacity: 0.2 }}>
             <img src="/svg-ani/infinity-loop.svg" alt="" className="no-interaction" style={{ width: '300px' }} />
           </div>
-          <h2 style={{ fontSize: 'clamp(2.5rem, 8vw, 4rem)', marginBottom: '2.5rem', fontWeight: 900 }}>바이브 코딩의 <br /><span className="gradient-text">연대에 합류하십시오.</span></h2>
-          <p className="narrative-p" style={{ maxWidth: '750px', margin: '0 auto 4rem', fontSize: '1.5rem', lineHeight: '1.6' }}>
-            당신의 직관이 산업의 가치가 되고, <br />
-            진화된 기술 생태계가 그 비전을 현실로 구현할 것입니다. <br />
-            함께 코딩의 새로운 미래를 정립합시다.
+          <h2 style={{ fontSize: 'clamp(3rem, 10vw, 5.5rem)', marginBottom: '3.5rem', fontWeight: 900, lineHeight: 1 }}>
+            새로운 문명의 <br /><span className="gradient-text">지휘관이 되십시오.</span>
+          </h2>
+          <p className="narrative-p" style={{
+            maxWidth: '900px',
+            margin: '0 auto 5rem',
+            fontSize: 'clamp(1.2rem, 3vw, 1.8rem)',
+            lineHeight: '1.6',
+            fontWeight: 300,
+            opacity: 0.9
+          }}>
+            당신의 직관은 이제 산업의 표준이 됩니다. <br />
+            기술적 중력을 이겨낸 자만이 미래의 가장 높은 곳에서 <br />
+            무한한 창조의 비전을 현실로 빚어낼 것입니다.
           </p>
 
           <div style={{ display: 'flex', gap: '24px', justifyContent: 'center', flexWrap: 'wrap' }}>
