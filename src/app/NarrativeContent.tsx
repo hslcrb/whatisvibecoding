@@ -141,7 +141,8 @@ export default function NarrativeContent() {
             letterSpacing: '-0.04em',
             marginBottom: '3rem'
           }}>
-            당신은 아직도 <br /><span className="gradient-text">기계처럼 코딩하십니까?</span>
+            당신은 아직도 <br />
+            <span className="gradient-text" style={{ whiteSpace: 'nowrap', display: 'inline-block' }}>기계처럼 코딩하십니까?</span>
           </h1>
           <p className="narrative-p" style={{
             fontSize: 'clamp(1.2rem, 3vw, 1.8rem)',
