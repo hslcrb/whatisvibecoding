@@ -85,6 +85,7 @@
   --highlight-teal-text: #1a1a1a;
   --glow-opacity: 0.05;
   --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  --theme-invert: brightness(0);
 
   --max-width: 1200px;
   --font-heading: 'A2z', 'Outfit', 'Noto Sans KR', sans-serif;
@@ -110,6 +111,7 @@
   --highlight-teal-text: #050505;
   --glow-opacity: 0.1;
   --card-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  --theme-invert: brightness(0) invert(1);
 }
 
 @media (min-width: 2000px) {

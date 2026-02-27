@@ -105,6 +105,42 @@ export default function NarrativeContent() {
 
   return (
     <div style={{ perspective: '1000px' }}>
+      {/* Theme Toggle Button */}
+      <button
+        onClick={toggleTheme}
+        style={{
+          position: 'fixed',
+          top: '30px',
+          right: '30px',
+          zIndex: 1000,
+          width: '50px',
+          height: '50px',
+          borderRadius: '50%',
+          background: 'var(--glass-bg)',
+          backdropFilter: 'blur(10px)',
+          border: '1px solid var(--glass-border)',
+          cursor: 'pointer',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          fontSize: '1.5rem',
+          color: 'var(--text-color)',
+          transition: 'all 0.3s ease',
+          boxShadow: 'var(--card-shadow)'
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.transform = 'scale(1.1)';
+          e.currentTarget.style.borderColor = 'var(--accent-primary)';
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.transform = 'scale(1)';
+          e.currentTarget.style.borderColor = 'var(--glass-border)';
+        }}
+        title={`Switch to ${theme === 'dark' ? 'Light' : 'Dark'} Mode`}
+      >
+        {theme === 'dark' ? '☼' : '☾'}
+      </button>
+
       <FluidBackground />
 
       {/* Floating Decorative Elements */}
@@ -171,7 +207,7 @@ export default function NarrativeContent() {
             left: '0',
             width: '100%',
             height: '200px',
-            background: 'linear-gradient(to bottom, transparent, rgba(5,5,5,0.8) 50%, #050505)',
+            background: 'linear-gradient(to bottom, transparent, var(--bg-color))',
             zIndex: 1,
             pointerEvents: 'none'
           }}></div>
@@ -187,11 +223,11 @@ export default function NarrativeContent() {
             style={{
               padding: '16px',
               overflow: 'hidden',
-              border: '1px solid rgba(112, 0, 255, 0.2)',
-              background: 'rgba(5, 5, 5, 0.4)',
+              border: '1px solid var(--glass-border)',
+              background: 'var(--glass-bg)',
               position: 'relative',
               borderRadius: '24px',
-              boxShadow: '0 40px 100px rgba(0,0,0,0.6)',
+              boxShadow: 'var(--card-shadow)',
               userSelect: 'none',
               WebkitUserSelect: 'none'
             }}
@@ -678,8 +714,8 @@ export default function NarrativeContent() {
           <div className="container">
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '60px', marginBottom: '80px', textAlign: 'left' }}>
               <div style={{ gridColumn: 'span 1' }}>
-                <img src="/rheehose.svg" alt="Rheehose" className="no-interaction" style={{ height: '32px', width: 'auto', marginBottom: '10px', filter: 'brightness(0) invert(1)' }} onContextMenu={(e) => e.preventDefault()} />
-                <p style={{ marginTop: '20px', fontSize: '0.9rem', color: 'rgba(255,255,255,0.5)', lineHeight: '1.6' }}>
+                <img src="/rheehose.svg" alt="Rheehose" className="no-interaction" style={{ height: '32px', width: 'auto', marginBottom: '10px', filter: 'var(--theme-invert)' }} onContextMenu={(e) => e.preventDefault()} />
+                <p style={{ marginTop: '20px', fontSize: '0.9rem', color: 'var(--text-muted)', lineHeight: '1.6' }}>
                   우리는 창조의 중력을 거스르고 <br />
                   AI와 인간의 궁극적 협업을 <br />
                   현실로 만듭니다.
