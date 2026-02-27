@@ -221,18 +221,6 @@ export default function NarrativeContent() {
         <p style={{ fontSize: '1rem', marginBottom: '8px' }}>&copy; 2026 Vibe Coding Industry Federation. All rights reserved.</p>
         <p style={{ fontSize: '0.85rem' }}>Crafted with Vibe, Evidence, and Next.js</p>
       </footer>
-
-      <style jsx>{`
-        .reveal {
-          opacity: 0;
-          transform: translateY(30px);
-          transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .reveal.active {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      `}</style>
     </div>
   );
 }
