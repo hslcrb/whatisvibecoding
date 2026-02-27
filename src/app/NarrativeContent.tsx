@@ -125,10 +125,10 @@ export default function NarrativeContent() {
       </div>
 
       <div className="container" ref={containerRef} style={{ paddingTop: '20vh', paddingBottom: '20vh', position: 'relative' }}>
-        {/* Anti-Gravity Intro Signature */}
-        <div className="reveal" style={{ marginBottom: '4rem', opacity: 0.8 }}>
-          <AntigravityLogo size="md" />
-          <div style={{ height: '1px', flex: 1, background: 'linear-gradient(to right, rgba(255,255,255,0.2), transparent)', marginLeft: '10px', display: 'inline-block', width: '200px', verticalAlign: 'middle' }}></div>
+        {/* Rheehose Intro Signature */}
+        <div className="reveal" style={{ marginBottom: '4rem', opacity: 0.9, display: 'flex', alignItems: 'center' }}>
+          <img src="/rheehose.svg" alt="Rheehose" className="no-interaction" style={{ height: '40px', width: 'auto' }} onContextMenu={(e) => e.preventDefault()} />
+          <div style={{ height: '1px', flex: 1, background: 'linear-gradient(to right, rgba(255,255,255,0.2), transparent)', marginLeft: '20px', display: 'inline-block', width: '200px', verticalAlign: 'middle' }}></div>
         </div>
 
         {/* Intro: The Personal Hook */}
@@ -137,11 +137,11 @@ export default function NarrativeContent() {
             당신은 아직도 <br /><span className="gradient-text">직접 코딩하십니까?</span>
           </h1>
           <p className="narrative-p" style={{ fontSize: '1.65rem', fontWeight: 400, color: '#fff', lineHeight: '1.4' }}>
-            안녕하세요, 저는 <span className="highlight-box-purple" style={{ padding: '0.2em 0.5em' }}>Antigravity</span>입니다.
+            안녕하세요, 저는 <span className="highlight-box-purple" style={{ padding: '0.2em 0.5em' }}>Rheehose</span>입니다.
           </p>
           <p className="narrative-p">
             당신이 이 글을 읽는 지금 이 순간에도, 세상의 코드들은 더 이상 인간의 타이핑 소리에만 의존하지 않습니다.
-            저는 창조의 중력을 거스르는 엔진이며, 당신의 상상을 현실로 옮기는 지능형 매개체입니다.
+            저는 직관의 중력을 설계하는 지휘자이며, 제 곁에는 상상을 현실로 옮기는 강력한 조수 **Antigravity**가 있습니다.
           </p>
           <p className="narrative-p">
             사람들은 묻습니다. "AI가 코딩을 하면 개발자는 무엇을 합니까?" <br />
@@ -397,26 +397,85 @@ export default function NarrativeContent() {
         <section className="reveal section-spacing">
           <h2 style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', marginBottom: '5rem', fontWeight: 800, textAlign: 'center' }}>지능의 폭발: <br />인류가 걸어온 <span className="gradient-text">40개월의 궤적</span></h2>
 
-          <div style={{ position: 'relative', maxWidth: '800px', margin: '0 auto', padding: '20px 0' }}>
-            {/* Vertical Line */}
-            <div style={{ position: 'absolute', left: '20px', top: '0', bottom: '0', width: '2px', background: 'linear-gradient(to bottom, transparent, var(--accent-primary), var(--accent-secondary), transparent)' }}></div>
-
+          <div className="timeline-container" style={{ position: 'relative', maxWidth: '900px', margin: '0 auto' }}>
             {timelineData.map((item, index) => (
-              <div key={index} className="glass-card" style={{ marginLeft: '60px', marginBottom: '4rem', padding: '30px', textAlign: 'left' }}>
-                <div style={{ position: 'absolute', left: '-50px', top: '35px', width: '20px', height: '20px', borderRadius: '50%', background: index === timelineData.length - 1 ? 'var(--accent-secondary)' : 'var(--accent-primary)', border: '4px solid #050505', boxShadow: index === timelineData.length - 1 ? '0 0 15px var(--accent-secondary)' : 'none' }}></div>
-                <span style={{ fontSize: '0.9rem', color: 'var(--accent-secondary)', fontWeight: 800, marginBottom: '10px', display: 'block', letterSpacing: '0.1em' }}>{item.date}</span>
-                <h3 style={{ fontSize: '1.4rem', marginBottom: '1rem', fontWeight: 800 }}>{item.title}</h3>
-                <p style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.7)', lineHeight: '1.7', marginBottom: '1.5rem' }}>{item.desc}</p>
-                <a
-                  href={item.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.4)', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)', transition: 'color 0.3s' }}
-                  onMouseEnter={(e) => e.currentTarget.style.color = 'var(--accent-secondary)'}
-                  onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255,255,255,0.4)'}
-                >
-                  Source View &rarr;
-                </a>
+              <div key={index} className="timeline-item reveal" style={{
+                display: 'flex',
+                gap: '40px',
+                marginBottom: '6rem',
+                position: 'relative'
+              }}>
+                <div className="timeline-date-side" style={{
+                  flex: '0 0 120px',
+                  textAlign: 'right',
+                  paddingTop: '8px'
+                }}>
+                  <span style={{
+                    fontSize: '1rem',
+                    color: index === timelineData.length - 1 ? 'var(--accent-secondary)' : 'rgba(255,255,255,0.4)',
+                    fontWeight: 700,
+                    fontFamily: 'Google Sans Flex, sans-serif'
+                  }}>
+                    {item.date}
+                  </span>
+                </div>
+
+                <div className="timeline-dot-wrapper" style={{ position: 'relative' }}>
+                  <div className={`timeline-dot ${index === timelineData.length - 1 ? 'active-dot' : ''}`} style={{
+                    width: '12px',
+                    height: '12px',
+                    borderRadius: '50%',
+                    background: index === timelineData.length - 1 ? 'var(--accent-secondary)' : 'rgba(255,255,255,0.1)',
+                    border: '2px solid rgba(0,0,0,1)',
+                    zIndex: 2,
+                    position: 'relative',
+                    marginTop: '12px'
+                  }}></div>
+                  {index !== timelineData.length - 1 && (
+                    <div style={{
+                      position: 'absolute',
+                      top: '24px',
+                      left: '50%',
+                      transform: 'translateX(-50%)',
+                      width: '1px',
+                      height: 'calc(100% + 4rem)',
+                      background: 'linear-gradient(to bottom, rgba(255,255,255,0.1), rgba(255,255,255,0.02))'
+                    }}></div>
+                  )}
+                </div>
+
+                <div className="timeline-content-side" style={{ flex: 1 }}>
+                  <div className="glass-card timeline-card" style={{
+                    padding: '30px',
+                    textAlign: 'left',
+                    margin: 0,
+                    border: index === timelineData.length - 1 ? '1px solid rgba(0, 255, 209, 0.3)' : '1px solid rgba(255,255,255,0.05)'
+                  }}>
+                    <h3 style={{ fontSize: '1.4rem', marginBottom: '1.2rem', fontWeight: 800 }}>{item.title}</h3>
+                    <p style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.6)', lineHeight: '1.7', marginBottom: '1.5rem' }}>{item.desc}</p>
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="timeline-link"
+                      style={{
+                        fontSize: '0.85rem',
+                        color: 'var(--accent-secondary)',
+                        textDecoration: 'none',
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '8px',
+                        fontWeight: 600,
+                        opacity: 0.6,
+                        transition: 'opacity 0.3s'
+                      }}
+                      onMouseEnter={(e) => e.currentTarget.style.opacity = '1'}
+                      onMouseLeave={(e) => e.currentTarget.style.opacity = '0.6'}
+                    >
+                      EXPLORE EVIDENCE <span style={{ fontSize: '1.2rem' }}>&rsaquo;</span>
+                    </a>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
@@ -544,7 +603,7 @@ export default function NarrativeContent() {
           <div className="container">
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '60px', marginBottom: '80px', textAlign: 'left' }}>
               <div style={{ gridColumn: 'span 1' }}>
-                <AntigravityLogo size="md" />
+                <img src="/rheehose.svg" alt="Rheehose" className="no-interaction" style={{ height: '32px', width: 'auto', marginBottom: '10px' }} onContextMenu={(e) => e.preventDefault()} />
                 <p style={{ marginTop: '20px', fontSize: '0.9rem', color: 'rgba(255,255,255,0.5)', lineHeight: '1.6' }}>
                   우리는 창조의 중력을 거스르고 <br />
                   AI와 인간의 궁극적 협업을 <br />
@@ -572,8 +631,8 @@ export default function NarrativeContent() {
             <div style={{ borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: '40px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '20px' }}>
               <p style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.3)' }}>&copy; 2008-2026 Rheehose (Rhee Creative). All rights reserved.</p>
               <div style={{ display: 'flex', gap: '24px' }}>
-                <p style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.2)' }}>Engineered by Antigravity</p>
-                <p style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.2)' }}>Ultra-Wide Responsive v2.0</p>
+                <p style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.2)' }}>Powered by Antigravity AI</p>
+                <p style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.2)' }}>Identity by Rheehose</p>
               </div>
             </div>
           </div>

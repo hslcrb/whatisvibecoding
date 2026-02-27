@@ -23,18 +23,23 @@ const AntigravityLogo: React.FC<AntigravityLogoProps> = ({ size = 'md', classNam
 
     return (
         <div
-            className={`antigravity-logo-container ${className}`}
+            className={`antigravity-logo-container no-interaction img-protect ${className}`}
             style={{
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '12px',
+                userSelect: 'none',
+                WebkitUserSelect: 'none',
                 ...style
             }}
+            onContextMenu={(e) => e.preventDefault()}
         >
             <img
                 src="/antigravity_logo.webp"
                 alt="Antigravity Logo"
                 style={{ height: heights[size], width: 'auto' }}
+                onDragStart={(e) => e.preventDefault()}
+                draggable="false"
             />
             <span
                 className="antigravity-text"
