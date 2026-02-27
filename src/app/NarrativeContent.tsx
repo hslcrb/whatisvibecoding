@@ -152,11 +152,31 @@ export default function NarrativeContent() {
         {/* The Demonstration Section: ex.png */}
         <section className="reveal section-spacing">
           <h2 style={{ fontSize: 'clamp(2rem, 5vw, 2.8rem)', marginBottom: '3rem', fontWeight: 800 }}>지휘의 현장: <br />Antigravity와의 협업</h2>
-          <div className="glass-card" style={{ padding: '12px', overflow: 'hidden', border: '1px solid rgba(112, 0, 255, 0.3)', background: 'rgba(0,0,0,0.6)', position: 'relative' }}>
+          <div
+            className="glass-card img-protect"
+            style={{
+              padding: '12px',
+              overflow: 'hidden',
+              border: '1px solid rgba(112, 0, 255, 0.3)',
+              background: 'rgba(0,0,0,0.6)',
+              position: 'relative',
+              userSelect: 'none',
+              WebkitUserSelect: 'none'
+            }}
+            onContextMenu={(e) => e.preventDefault()}
+          >
             <div className="svg-container" style={{ bottom: '-20px', right: '-20px', width: '200px', transform: 'rotate(-15deg)' }}>
               <img src="/svg-ani/tech-flow.svg" alt="" className="no-interaction" />
             </div>
-            <img src="/ex.webp" alt="Antigravity Demonstration" className="no-interaction" style={{ width: '100%', height: 'auto', borderRadius: '16px', display: 'block' }} />
+            <img
+              src="/ex.webp"
+              alt="Antigravity Demonstration"
+              className="no-interaction"
+              style={{ width: '100%', height: 'auto', borderRadius: '16px', display: 'block' }}
+              onContextMenu={(e) => e.preventDefault()}
+              onDragStart={(e) => e.preventDefault()}
+              draggable="false"
+            />
             <div style={{ padding: '30px 20px', textAlign: 'center' }}>
               <p style={{ fontSize: '1.1rem', color: 'rgba(255,255,255,0.8)', fontWeight: 300, lineHeight: '1.6' }}>
                 &ldquo;단 한 줄의 추상적인 의도 파악에서 시작해, 복잡한 시스템의 뼈대를 세우는 과정— <br />

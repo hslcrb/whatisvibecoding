@@ -211,6 +211,15 @@ h3 {
   user-select: none !important;
   -webkit-user-drag: none !important;
   pointer-events: none !important;
+  -webkit-touch-callout: none !important;
+}
+
+.img-protect {
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .svg-container {
