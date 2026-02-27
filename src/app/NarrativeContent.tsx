@@ -762,8 +762,8 @@ export default function NarrativeContent() {
                       gap: '12px',
                       textDecoration: 'none',
                       margin: 0,
-                      background: 'rgba(255,255,255,0.03)',
-                      border: '1px solid rgba(255,255,255,0.1)',
+                      background: 'var(--glass-bg)',
+                      border: '1px solid var(--glass-border)',
                       transition: 'all 0.3s ease'
                     }}
                     onMouseEnter={(e) => {
@@ -775,8 +775,8 @@ export default function NarrativeContent() {
                       e.currentTarget.style.borderColor = 'var(--glass-border)';
                     }}
                   >
-                    <img src="/openai_logo.svg" alt="" style={{ height: '16px', filter: 'brightness(0) invert(1)', opacity: 0.7 }} />
-                    <span style={{ fontSize: '0.9rem', color: '#fff', fontWeight: 600 }}>GitHub</span>
+                    <img src="/openai_logo.svg" alt="" style={{ height: '16px', filter: 'var(--theme-invert)', opacity: 0.7 }} />
+                    <span style={{ fontSize: '0.9rem', color: 'var(--text-color)', fontWeight: 600 }}>GitHub</span>
                   </a>
                   <a
                     href="https://rheehose.com"
@@ -790,31 +790,31 @@ export default function NarrativeContent() {
                       gap: '12px',
                       textDecoration: 'none',
                       margin: 0,
-                      background: 'rgba(255,255,255,0.03)',
-                      border: '1px solid rgba(255,255,255,0.1)',
+                      background: 'var(--glass-bg)',
+                      border: '1px solid var(--glass-border)',
                       transition: 'all 0.3s ease'
                     }}
                     onMouseEnter={(e) => {
-                      e.currentTarget.style.background = 'rgba(255,255,255,0.08)';
+                      e.currentTarget.style.background = 'var(--glass-hover-bg)';
                       e.currentTarget.style.borderColor = 'var(--accent-primary)';
                     }}
                     onMouseLeave={(e) => {
-                      e.currentTarget.style.background = 'rgba(255,255,255,0.03)';
-                      e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)';
+                      e.currentTarget.style.background = 'var(--glass-bg)';
+                      e.currentTarget.style.borderColor = 'var(--glass-border)';
                     }}
                   >
-                    <img src="/rheehose.svg" alt="" style={{ height: '14px', filter: 'brightness(0) invert(1)', opacity: 0.7 }} />
-                    <span style={{ fontSize: '0.9rem', color: '#fff', fontWeight: 600 }}>My Site</span>
+                    <img src="/rheehose.svg" alt="" style={{ height: '14px', filter: 'var(--theme-invert)', opacity: 0.7 }} />
+                    <span style={{ fontSize: '0.9rem', color: 'var(--text-color)', fontWeight: 600 }}>My Site</span>
                   </a>
                 </div>
               </div>
             </div>
 
-            <div style={{ borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: '40px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '20px' }}>
-              <p style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.3)' }}>&copy; 2008-2026 Rheehose (Rhee Creative). All rights reserved.</p>
+            <div style={{ borderTop: '1px solid var(--glass-border)', paddingTop: '40px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '20px' }}>
+              <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>&copy; 2008-2026 Rheehose (Rhee Creative). All rights reserved.</p>
               <div style={{ display: 'flex', gap: '24px' }}>
-                <p style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.2)' }}>Vibe Coding movement</p>
-                <p style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.2)' }}>Identity by Rheehose</p>
+                <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)', opacity: 0.5 }}>Vibe Coding movement</p>
+                <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)', opacity: 0.5 }}>Identity by Rheehose</p>
               </div>
             </div>
           </div>
