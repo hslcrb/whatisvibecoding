@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import Link from 'next/link';
 import FluidBackground from './FluidBackground';
 import AntigravityLogo from '../components/AntigravityLogo';
 
