@@ -127,7 +127,7 @@ export default function NarrativeContent() {
       <div className="container" ref={containerRef} style={{ paddingTop: '20vh', paddingBottom: '20vh', position: 'relative' }}>
         {/* Rheehose Intro Signature */}
         <div className="reveal" style={{ marginBottom: '4rem', opacity: 0.9, display: 'flex', alignItems: 'center' }}>
-          <img src="/rheehose.svg" alt="Rheehose" className="no-interaction" style={{ height: '40px', width: 'auto' }} onContextMenu={(e) => e.preventDefault()} />
+          <img src="/rheehose.svg" alt="Rheehose" className="no-interaction" style={{ height: '40px', width: 'auto', filter: 'brightness(0) invert(1)' }} onContextMenu={(e) => e.preventDefault()} />
           <div style={{ height: '1px', flex: 1, background: 'linear-gradient(to right, rgba(255,255,255,0.2), transparent)', marginLeft: '20px', display: 'inline-block', width: '200px', verticalAlign: 'middle' }}></div>
         </div>
 
@@ -137,21 +137,21 @@ export default function NarrativeContent() {
             당신은 아직도 <br /><span className="gradient-text">직접 코딩하십니까?</span>
           </h1>
           <p className="narrative-p" style={{ fontSize: '1.65rem', fontWeight: 400, color: '#fff', lineHeight: '1.4' }}>
-            안녕하세요, 저는 <span className="highlight-box-purple" style={{ padding: '0.2em 0.5em' }}>Rheehose</span>입니다.
+            이것은 단순한 기술의 변화가 아닌, <span className="highlight-box-purple" style={{ padding: '0.2em 0.5em' }}>패러다임의 혁명</span>입니다.
           </p>
           <p className="narrative-p">
             당신이 이 글을 읽는 지금 이 순간에도, 세상의 코드들은 더 이상 인간의 타이핑 소리에만 의존하지 않습니다.
-            저는 직관의 중력을 설계하는 지휘자이며, 제 곁에는 상상을 현실로 옮기는 강력한 조수 **Antigravity**가 있습니다.
+            단순한 '도구'의 시대를 넘어, 인간의 직관과 AI의 실행력이 결합된 **바이브 코딩(Vibe Coding)**의 시대가 도래했습니다.
           </p>
           <p className="narrative-p">
-            사람들은 묻습니다. "AI가 코딩을 하면 개발자는 무엇을 합니까?" <br />
-            저는 대답합니다. **"개발자는 이제 '생각'을 합니다. 그리고 저는 그 생각을 '실체'로 만듭니다."**
+            우리는 묻습니다. "AI가 코딩을 하면 우리는 무엇을 합니까?" <br />
+            정답은 명확합니다. **"우리는 이제 '가치'를 설계하고, AI는 그 가치를 '실체'로 만듭니다."**
           </p>
         </section>
 
         {/* The Demonstration Section: ex.png */}
         <section className="reveal section-spacing">
-          <h2 style={{ fontSize: 'clamp(2rem, 5vw, 2.8rem)', marginBottom: '3rem', fontWeight: 800 }}>지휘의 현장: <br />Antigravity와의 협업</h2>
+          <h2 style={{ fontSize: 'clamp(2rem, 5vw, 2.8rem)', marginBottom: '3rem', fontWeight: 800 }}>지원의 현장: <br />Antigravity 엔진과의 협업</h2>
           <div
             className="glass-card img-protect"
             style={{
@@ -563,11 +563,11 @@ export default function NarrativeContent() {
           <div className="svg-container" style={{ top: '0', left: '50%', transform: 'translateX(-50%)', opacity: 0.2 }}>
             <img src="/svg-ani/infinity-loop.svg" alt="" className="no-interaction" style={{ width: '300px' }} />
           </div>
-          <h2 style={{ fontSize: 'clamp(2.5rem, 8vw, 4rem)', marginBottom: '2.5rem', fontWeight: 900 }}>이 거대한 흐름의 <br /><span className="gradient-text">주인공이 되십시오.</span></h2>
+          <h2 style={{ fontSize: 'clamp(2.5rem, 8vw, 4rem)', marginBottom: '2.5rem', fontWeight: 900 }}>바이브 코딩의 <br /><span className="gradient-text">연대에 합류하십시오.</span></h2>
           <p className="narrative-p" style={{ maxWidth: '750px', margin: '0 auto 4rem', fontSize: '1.5rem', lineHeight: '1.6' }}>
-            당신의 직관이 산업의 가치가 되는 곳. <br />
-            당신의 옆에는 언제나 든든한 조수, **Antigravity**가 있습니다. <br />
-            함께 미래의 지형도를 그려나갑시다.
+            당신의 직관이 산업의 가치가 되고, <br />
+            지능형 엔진 Antigravity가 그 비전을 완벽하게 뒷받침할 것입니다. <br />
+            함께 새로운 시대의 지형도를 그려나갑시다.
           </p>
 
           <div style={{ display: 'flex', gap: '24px', justifyContent: 'center', flexWrap: 'wrap' }}>
@@ -592,9 +592,9 @@ export default function NarrativeContent() {
                 e.currentTarget.style.transform = 'translateY(0) scale(1)';
                 e.currentTarget.style.boxShadow = '0 15px 40px rgba(112, 0, 255, 0.5)';
               }}
-              onClick={() => alert('Vibe Coding Federation에 오신 것을 환영합니다. (Antigravity와 함께)')}
+              onClick={() => alert('Vibe Coding Federation에 오신 것을 환영합니다.')}
             >
-              Antigravity와 동참하기
+              바이브 코딩 연대 참여하기
             </button>
           </div>
         </section>
@@ -603,7 +603,7 @@ export default function NarrativeContent() {
           <div className="container">
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '60px', marginBottom: '80px', textAlign: 'left' }}>
               <div style={{ gridColumn: 'span 1' }}>
-                <img src="/rheehose.svg" alt="Rheehose" className="no-interaction" style={{ height: '32px', width: 'auto', marginBottom: '10px' }} onContextMenu={(e) => e.preventDefault()} />
+                <img src="/rheehose.svg" alt="Rheehose" className="no-interaction" style={{ height: '32px', width: 'auto', marginBottom: '10px', filter: 'brightness(0) invert(1)' }} onContextMenu={(e) => e.preventDefault()} />
                 <p style={{ marginTop: '20px', fontSize: '0.9rem', color: 'rgba(255,255,255,0.5)', lineHeight: '1.6' }}>
                   우리는 창조의 중력을 거스르고 <br />
                   AI와 인간의 궁극적 협업을 <br />
