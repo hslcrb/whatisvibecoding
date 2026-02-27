@@ -1,12 +1,24 @@
-'use client';
-
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import FluidBackground from './FluidBackground';
 import AntigravityLogo from '../components/AntigravityLogo';
 
 export default function NarrativeContent() {
+  const [theme, setTheme] = useState('dark');
   const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    setTheme(savedTheme);
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = theme === 'dark' ? 'light' : 'dark';
+    setTheme(newTheme);
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+  };
 
   useEffect(() => {
     const observerOptions = {
@@ -710,7 +722,13 @@ export default function NarrativeContent() {
           </div>
         </section>
 
-        <footer style={{ marginTop: '15vh', borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: '80px', paddingBottom: '60px', background: 'linear-gradient(to bottom, transparent, rgba(112, 0, 255, 0.02))' }}>
+        <footer style={{
+          marginTop: '15vh',
+          borderTop: '1px solid var(--glass-border)',
+          paddingTop: '80px',
+          paddingBottom: '60px',
+          background: 'linear-gradient(to bottom, transparent, var(--glass-bg))'
+        }}>
           <div className="container">
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '60px', marginBottom: '80px', textAlign: 'left' }}>
               <div style={{ gridColumn: 'span 1' }}>
@@ -722,7 +740,7 @@ export default function NarrativeContent() {
                 </p>
               </div>
               <div>
-                <h5 style={{ color: '#fff', fontSize: '1.1rem', marginBottom: '24px' }}>Resources</h5>
+                <h5 style={{ color: 'var(--text-color)', fontSize: '1.1rem', marginBottom: '24px' }}>Resources</h5>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                   <Link href="/notice" className="footer-link">공지사항</Link>
                   <Link href="/contributing" className="footer-link">기여 가이드</Link>
@@ -730,7 +748,7 @@ export default function NarrativeContent() {
                 </div>
               </div>
               <div>
-                <h5 style={{ color: '#fff', fontSize: '1.1rem', marginBottom: '24px' }}>Community</h5>
+                <h5 style={{ color: 'var(--text-color)', fontSize: '1.1rem', marginBottom: '24px' }}>Community</h5>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                   <a
                     href="https://github.com/hslcrb/whatisvibecoding"
@@ -749,12 +767,12 @@ export default function NarrativeContent() {
                       transition: 'all 0.3s ease'
                     }}
                     onMouseEnter={(e) => {
-                      e.currentTarget.style.background = 'rgba(255,255,255,0.08)';
+                      e.currentTarget.style.background = 'var(--glass-hover-bg)';
                       e.currentTarget.style.borderColor = 'var(--accent-secondary)';
                     }}
                     onMouseLeave={(e) => {
-                      e.currentTarget.style.background = 'rgba(255,255,255,0.03)';
-                      e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)';
+                      e.currentTarget.style.background = 'var(--glass-bg)';
+                      e.currentTarget.style.borderColor = 'var(--glass-border)';
                     }}
                   >
                     <img src="/openai_logo.svg" alt="" style={{ height: '16px', filter: 'brightness(0) invert(1)', opacity: 0.7 }} />
