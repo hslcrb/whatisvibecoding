@@ -251,3 +251,51 @@ h3 {
 .section-spacing {
   margin-bottom: 25vh;
 }
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+  :root {
+    --max-width: 100%;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  h1 {
+    font-size: 3rem !important;
+    line-height: 1.1 !important;
+  }
+
+  h2 {
+    font-size: 2.2rem !important;
+  }
+
+  .narrative-p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+  }
+
+  .narrative-quote {
+    font-size: 1.6rem;
+    padding-left: 1.5rem;
+    margin: 4rem 0;
+  }
+
+  .glass-card {
+    padding: 30px 20px;
+  }
+
+  .section-spacing {
+    margin-bottom: 15vh;
+  }
+
+  .glow-orb {
+    filter: blur(80px);
+    opacity: 0.05;
+  }
+}
+
+.timeline-glow {
+  filter: drop-shadow(0 0 5px var(--accent-primary));
+}

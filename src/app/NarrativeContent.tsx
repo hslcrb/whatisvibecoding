@@ -25,6 +25,63 @@ export default function NarrativeContent() {
     return () => observer.disconnect();
   }, []);
 
+  const timelineData = [
+    {
+      date: "2022.11",
+      title: "ChatGPT의 탄생 (The Spark)",
+      desc: "OpenAI가 ChatGPT(GPT-3.5)를 공개하며 생성형 AI 시대의 서막을 열었습니다. 출시 5일 만에 100만 사용자를 돌파하는 역사적 기록을 세웠습니다.",
+      link: "https://openai.com/blog/chatgpt"
+    },
+    {
+      date: "2023.03",
+      title: "GPT-4 & 멀티모달의 도약",
+      desc: "단순 텍스트를 넘어 이미지와 고도의 추론 능력을 갖춘 GPT-4가 출시되었습니다. 변호사 시험 상위 10%를 기록하며 지능의 임계점을 돌파했습니다.",
+      link: "https://openai.com/research/gpt-4"
+    },
+    {
+      date: "2023.12",
+      title: "Google Gemini 1.0",
+      desc: "구글이 가장 범용적이고 유능한 AI 모델인 Gemini를 발표하며 진정한 멀티모달 경쟁 시대가 열렸습니다.",
+      link: "https://blog.google/technology/ai/google-gemini-ai/"
+    },
+    {
+      date: "2024.02",
+      title: "Sora: 비디오 혁명",
+      desc: "텍스트만으로 고해상도 영상을 생성하는 Sora가 공개되며 콘텐츠 산업의 미래를 예고했습니다.",
+      link: "https://openai.com/sora"
+    },
+    {
+      date: "2024.03",
+      title: "Devin & Claude 3",
+      desc: "최초의 AI 소프트웨어 엔지니어 Devin과 강력한 추론 능력을 가진 Anthropic의 Claude 3가 등장하며 개발 환경에 대대적인 변화를 불러왔습니다.",
+      link: "https://www.anthropic.com/news/claude-3-family"
+    },
+    {
+      date: "2025.01",
+      title: "Project Stargate & Agentic AI",
+      desc: "기존의 챗봇을 넘어 스스로 계획하고 실행하는 '에이전틱(Agentic) AI'가 산업 현장의 핵심으로 부상했습니다. 대규모 인프라 투자인 Project Stargate가 가동되었습니다.",
+      link: "https://www.morganstanley.com/ideas/generative-ai-agents-automation"
+    },
+    {
+      date: "2025.11",
+      title: "Gemini 3 & GPT-5.1 최적화",
+      desc: "초거대 모델들이 현실 세계의 복잡한 비즈니스 워크플로우를 완벽하게 이해하고 자동 제어하는 수준으로 진화했습니다.",
+      link: "https://blog.google/technology/ai/"
+    },
+    {
+      date: "2026.01",
+      title: "일상의 인프라가 된 AI",
+      desc: "AI는 더 이상 특별한 도구가 아닌, 전기나 수도처럼 모든 산업과 일상의 기저에서 작동하는 필수 인프라로 안착했습니다.",
+      link: "https://www.microsoft.com/en-us/ai"
+    },
+    {
+      date: "2026.02",
+      title: "대한민국 AI 임팩트 서밋 (오늘)",
+      desc: "글로벌 AI 거물들이 모여 '인류를 위한 AI'를 논의하며, AI가 창출하는 경제적 가치가 정점에 달하는 시기를 맞이했습니다.",
+      link: "https://www.aitimes.com/"
+    }
+  ];
+
   return (
     <div style={{ perspective: '1000px' }}>
       <div className="container" ref={containerRef} style={{ paddingTop: '20vh', paddingBottom: '20vh', position: 'relative' }}>
@@ -162,6 +219,35 @@ export default function NarrativeContent() {
             같은 악기를 들어도 연주자에 따라 소음이 되기도, 명곡이 되기도 하듯
             당신의 '바이브'가 이 산업의 퀄리티를 결정합니다.
           </p>
+        </section>
+
+        {/* AI Evolution Timeline */}
+        <section className="reveal section-spacing">
+          <h2 style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', marginBottom: '5rem', fontWeight: 800, textAlign: 'center' }}>지능의 폭발: <br />인류가 걸어온 <span className="gradient-text">40개월의 궤적</span></h2>
+
+          <div style={{ position: 'relative', maxWidth: '800px', margin: '0 auto', padding: '20px 0' }}>
+            {/* Vertical Line */}
+            <div style={{ position: 'absolute', left: '20px', top: '0', bottom: '0', width: '2px', background: 'linear-gradient(to bottom, transparent, var(--accent-primary), var(--accent-secondary), transparent)' }}></div>
+
+            {timelineData.map((item, index) => (
+              <div key={index} className="glass-card" style={{ marginLeft: '60px', marginBottom: '4rem', padding: '30px', textAlign: 'left' }}>
+                <div style={{ position: 'absolute', left: '-50px', top: '35px', width: '20px', height: '20px', borderRadius: '50%', background: index === timelineData.length - 1 ? 'var(--accent-secondary)' : 'var(--accent-primary)', border: '4px solid #050505', boxShadow: index === timelineData.length - 1 ? '0 0 15px var(--accent-secondary)' : 'none' }}></div>
+                <span style={{ fontSize: '0.9rem', color: 'var(--accent-secondary)', fontWeight: 800, marginBottom: '10px', display: 'block', letterSpacing: '0.1em' }}>{item.date}</span>
+                <h3 style={{ fontSize: '1.4rem', marginBottom: '1rem', fontWeight: 800 }}>{item.title}</h3>
+                <p style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.7)', lineHeight: '1.7', marginBottom: '1.5rem' }}>{item.desc}</p>
+                <a
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.4)', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)', transition: 'color 0.3s' }}
+                  onMouseEnter={(e) => e.currentTarget.style.color = 'var(--accent-secondary)'}
+                  onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255,255,255,0.4)'}
+                >
+                  Source View &rarr;
+                </a>
+              </div>
+            ))}
+          </div>
         </section>
 
         {/* The Progressive Persuasion: Why Join? */}
