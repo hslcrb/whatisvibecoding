@@ -141,11 +141,11 @@ export default function NarrativeContent() {
           </p>
           <p className="narrative-p">
             세상의 코드들은 더 이상 인간의 타이핑 소리에만 의존하지 않습니다.
-            단순한 '도구'의 시대를 넘어, 지휘자의 직관과 고성능 지능형 엔진 Antigravity가 결합된 **바이브 코딩(Vibe Coding)**의 시대가 열렸습니다.
+            단순한 '도구'의 시대를 넘어, 지휘자의 직관이 시스템의 결과물로 즉시 치환되는 **바이브 코딩(Vibe Coding)**의 시대가 열렸습니다.
           </p>
           <p className="narrative-p">
             질문은 간단합니다. "우리 시대의 엔지니어는 무엇을 해야 합니까?" <br />
-            해답 또한 명확합니다. **"엔지니어는 이제 '가치'를 설계하고, 시스템은 그 가치를 '실체'로 구현합니다."**
+            해답 또한 명확합니다. **"엔지니어는 이제 '가치'를 설계하고, 시스템은 그 가치를 입체적인 '실체'로 구현합니다."**
           </p>
         </section>
 
@@ -180,7 +180,7 @@ export default function NarrativeContent() {
             <div style={{ padding: '30px 20px', textAlign: 'center' }}>
               <p style={{ fontSize: '1.1rem', color: 'rgba(255,255,255,0.8)', fontWeight: 300, lineHeight: '1.6' }}>
                 &ldquo;추상적인 설계 의도에서 시작해, 복잡한 시스템의 아키텍처를 세우는 과정— <br />
-                이것이 바로 Antigravity 엔진이 뒷받침하는 **바이브 코딩**의 실제 현장입니다.&rdquo;
+                이것이 바로 현대적 IDE 환경에서 실현되는 **바이브 코딩**의 실제 현장입니다.&rdquo;
               </p>
             </div>
           </div>
@@ -310,10 +310,10 @@ export default function NarrativeContent() {
         <section className="reveal section-spacing">
           <p className="narrative-p">
             코딩은 이제 숙련공의 반복적인 망치질이 아닙니다. 그것은 영감을 현실로 치환하는 **'디지털 연금술'**입니다.
-            Antigravity는 인간의 언어 속에 숨은 맥락을 읽고, 수만 줄의 코드를 설계자의 비전에 맞춰 실시간으로 정렬합니다.
+            시스템은 인간의 언어 속에 숨은 맥락을 읽고, 수만 줄의 코드를 설계자의 비전에 맞춰 실시간으로 정렬합니다.
           </p>
           <blockquote className="narrative-quote">
-            &ldquo;Antigravity는 단순히 코드를 짜는 도구가 아닙니다. 상상력을 가로막는 기술적 중력을 제거하는 강력한 코어 엔진입니다. <br />
+            &ldquo;바이브 코딩은 단순히 코드를 짜는 기술이 아닙니다. 상상력을 가로막는 기술적 중력을 제거하고 가치 창출에 집중하는 새로운 문명적 표준입니다. <br />
             우리는 이제 문법의 감옥에서 벗어나 가치의 바다로 항해하고 있습니다.&rdquo;
           </blockquote>
           <p className="narrative-p">
@@ -566,7 +566,7 @@ export default function NarrativeContent() {
           <h2 style={{ fontSize: 'clamp(2.5rem, 8vw, 4rem)', marginBottom: '2.5rem', fontWeight: 900 }}>바이브 코딩의 <br /><span className="gradient-text">연대에 합류하십시오.</span></h2>
           <p className="narrative-p" style={{ maxWidth: '750px', margin: '0 auto 4rem', fontSize: '1.5rem', lineHeight: '1.6' }}>
             당신의 직관이 산업의 가치가 되고, <br />
-            Antigravity 엔진이 그 비전을 현실로 구현할 것입니다. <br />
+            진화된 기술 생태계가 그 비전을 현실로 구현할 것입니다. <br />
             함께 코딩의 새로운 미래를 정립합시다.
           </p>
 
@@ -631,7 +631,7 @@ export default function NarrativeContent() {
             <div style={{ borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: '40px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '20px' }}>
               <p style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.3)' }}>&copy; 2008-2026 Rheehose (Rhee Creative). All rights reserved.</p>
               <div style={{ display: 'flex', gap: '24px' }}>
-                <p style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.2)' }}>Powered by Antigravity AI</p>
+                <p style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.2)' }}>Vibe Coding movement</p>
                 <p style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.2)' }}>Identity by Rheehose</p>
               </div>
             </div>
