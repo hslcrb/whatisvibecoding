@@ -1,0 +1,45 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .node { fill: #7000FF; filter: drop-shadow(0 0 5px rgba(112, 0, 255, 0.8)); }
+    .link { stroke: rgba(112, 0, 255, 0.2); stroke-width: 1; fill: none; }
+    .pulse {
+      animation: pulse-node 4s ease-in-out infinite;
+      transform-origin: center;
+    }
+    @keyframes pulse-node {
+      0%, 100% { transform: scale(1); opacity: 0.5; }
+      50% { transform: scale(1.5); opacity: 1; }
+    }
+    .flow {
+      stroke-dasharray: 100;
+      stroke-dashoffset: 100;
+      animation: flow-line 10s linear infinite;
+      stroke: var(--accent-secondary, #00FFD1);
+      stroke-width: 1.5;
+      opacity: 0.6;
+    }
+    @keyframes flow-line {
+      to { stroke-dashoffset: -100; }
+    }
+  </style>
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Links -->
+  <path class="link flow" d="M100,100 L400,300 M400,300 L700,100 M100,500 L400,300 M400,300 L700,500" />
+  <path class="link" d="M100,100 L100,500 M700,100 L700,500 M100,100 L700,500 M100,500 L700,100" />
+  
+  <!-- Nodes -->
+  <circle cx="100" cy="100" r="6" class="node pulse" />
+  <circle cx="700" cy="100" r="6" class="node pulse" style="animation-delay: -1s;" />
+  <circle cx="100" cy="500" r="6" class="node pulse" style="animation-delay: -2s;" />
+  <circle cx="700" cy="500" r="6" class="node pulse" style="animation-delay: -3s;" />
+  <circle cx="400" cy="300" r="10" class="node pulse" style="animation-delay: -1.5s; fill: #00FFD1;" />
+</svg>

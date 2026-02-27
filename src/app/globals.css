@@ -93,11 +93,20 @@
   }
 }
 
+/* TV / Ultra-wide optimizations (>2500px) */
+@media (min-width: 2500px) {
+  :root {
+    --max-width: 1800px;
+    font-size: 24px;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'A2z', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 html,
@@ -160,6 +169,11 @@ h3 {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.gradient-text:hover {
+  transform: scale(1.02);
 }
 
 .reveal {
@@ -471,4 +485,23 @@ section::after {
   font-weight: 500;
   letter-spacing: -0.02em;
   color: #fff;
+}
+
+.footer-link {
+  color: rgba(255, 255, 255, 0.4);
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+.footer-link:hover {
+  color: var(--accent-secondary);
+  transform: translateY(-2px);
+}
+
+.manifesto-card {
+  border-left: 2px solid var(--accent-primary);
+  padding: 20px 30px;
+  background: rgba(112, 0, 255, 0.03);
+  margin-top: 40px;
 }

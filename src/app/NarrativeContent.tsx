@@ -451,8 +451,35 @@ export default function NarrativeContent() {
           </div>
         </section>
 
+        {/* Technical Manifesto Section */}
+        <section className="reveal section-spacing">
+          <div className="glass-card" style={{ textAlign: 'left', border: '1px solid rgba(112, 0, 255, 0.2)' }}>
+            <h2 style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', marginBottom: '2.5rem', fontWeight: 900 }}>기술 선언문 <br /><span className="gradient-text">(The Manifesto)</span></h2>
+            <div className="manifesto-card">
+              <p style={{ fontSize: '1.2rem', lineHeight: '1.8', color: 'rgba(255,255,255,0.9)', marginBottom: '1.5rem' }}>
+                &ldquo;우리는 더 이상 코드의 파편에 집착하지 않습니다. 우리는 **의도(Intent)**를 설계하고, AI는 그 의도를 완벽한 **연산(Computation)**으로 치환합니다. 이것은 개발의 종말이 아니라, 가치 창출의 새로운 문명적 도약입니다.&rdquo;
+              </p>
+              <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
+                <span className="benchmark-badge" style={{ borderColor: 'var(--accent-primary)', color: 'var(--accent-primary)' }}>Visionary Design</span>
+                <span className="benchmark-badge" style={{ borderColor: 'var(--accent-secondary)', color: 'var(--accent-secondary)' }}>Agentic Execution</span>
+                <span className="benchmark-badge">Infinite Scale</span>
+              </div>
+            </div>
+
+            <div style={{ position: 'relative', marginTop: '60px', height: '200px', overflow: 'hidden', borderRadius: '16px' }}>
+              <img src="/svg-ani/neural-net.svg" alt="" className="no-interaction" style={{ position: 'absolute', top: '-50%', left: '0', width: '100%', opacity: 0.3 }} />
+              <div style={{ position: 'absolute', bottom: '20px', left: '20px' }}>
+                <p style={{ fontSize: '0.9rem', color: 'var(--accent-secondary)', fontWeight: 700 }}>AI CONNECTIVITY LAYER v3.1</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* The Climax: Call to Action */}
-        <section className="reveal" style={{ textAlign: 'center', padding: '120px 0' }}>
+        <section className="reveal" style={{ textAlign: 'center', padding: '120px 0', position: 'relative' }}>
+          <div className="svg-container" style={{ top: '0', left: '50%', transform: 'translateX(-50%)', opacity: 0.2 }}>
+            <img src="/svg-ani/infinity-loop.svg" alt="" className="no-interaction" style={{ width: '300px' }} />
+          </div>
           <h2 style={{ fontSize: 'clamp(2.5rem, 8vw, 4rem)', marginBottom: '2.5rem', fontWeight: 900 }}>이 거대한 흐름의 <br /><span className="gradient-text">주인공이 되십시오.</span></h2>
           <p className="narrative-p" style={{ maxWidth: '750px', margin: '0 auto 4rem', fontSize: '1.5rem', lineHeight: '1.6' }}>
             당신의 직관이 산업의 가치가 되는 곳. <br />
@@ -460,7 +487,7 @@ export default function NarrativeContent() {
             함께 미래의 지형도를 그려나갑시다.
           </p>
 
-          <div style={{ display: 'flex', gap: '24px', justifyContent: 'center' }}>
+          <div style={{ display: 'flex', gap: '24px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <button
               style={{
                 padding: '24px 50px',
@@ -475,11 +502,11 @@ export default function NarrativeContent() {
                 transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)'
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'translateY(-5px)';
+                e.currentTarget.style.transform = 'translateY(-5px) scale(1.02)';
                 e.currentTarget.style.boxShadow = '0 20px 50px rgba(112, 0, 255, 0.6)';
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.transform = 'translateY(0) scale(1)';
                 e.currentTarget.style.boxShadow = '0 15px 40px rgba(112, 0, 255, 0.5)';
               }}
               onClick={() => alert('Vibe Coding Federation에 오신 것을 환영합니다. (Antigravity와 함께)')}
@@ -489,12 +516,43 @@ export default function NarrativeContent() {
           </div>
         </section>
 
-        <footer style={{ marginTop: '10vh', borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '60px', textAlign: 'center', color: 'rgba(255,255,255,0.4)', paddingBottom: '40px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', marginBottom: '20px', opacity: 0.6 }}>
-            <AntigravityLogo size="sm" />
+        <footer style={{ marginTop: '15vh', borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: '80px', paddingBottom: '60px', background: 'linear-gradient(to bottom, transparent, rgba(112, 0, 255, 0.02))' }}>
+          <div className="container">
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '60px', marginBottom: '80px', textAlign: 'left' }}>
+              <div style={{ gridColumn: 'span 1' }}>
+                <AntigravityLogo size="md" />
+                <p style={{ marginTop: '20px', fontSize: '0.9rem', color: 'rgba(255,255,255,0.5)', lineHeight: '1.6' }}>
+                  우리는 창조의 중력을 거스르고 <br />
+                  AI와 인간의 궁극적 협업을 <br />
+                  현실로 만듭니다.
+                </p>
+              </div>
+              <div>
+                <h5 style={{ color: '#fff', fontSize: '1.1rem', marginBottom: '24px' }}>Resources</h5>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                  <a href="/NOTICE.md" className="footer-link">공지사항</a>
+                  <a href="/CONTRIBUTING.md" className="footer-link">기여 가이드</a>
+                  <a href="/LICENSE" className="footer-link">라이선스 (MIT)</a>
+                </div>
+              </div>
+              <div>
+                <h5 style={{ color: '#fff', fontSize: '1.1rem', marginBottom: '24px' }}>Community</h5>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                  <a href="#" className="footer-link">GitHub Enterprise</a>
+                  <a href="#" className="footer-link">Discord Server</a>
+                  <a href="#" className="footer-link">Neural Network (Beta)</a>
+                </div>
+              </div>
+            </div>
+
+            <div style={{ borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: '40px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '20px' }}>
+              <p style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.3)' }}>&copy; 2008-2026 Rheehose (Rhee Creative). All rights reserved.</p>
+              <div style={{ display: 'flex', gap: '24px' }}>
+                <p style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.2)' }}>Engineered by Antigravity</p>
+                <p style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.2)' }}>Ultra-Wide Responsive v2.0</p>
+              </div>
+            </div>
           </div>
-          <p style={{ fontSize: '0.8rem', marginBottom: '8px' }}>&copy; 2008-2026 Rheehose (Rhee Creative). All rights reserved.</p>
-          <p style={{ fontSize: '0.75rem' }}>Engineered by Antigravity & Powered by Vibe</p>
         </footer>
       </div>
     </div>

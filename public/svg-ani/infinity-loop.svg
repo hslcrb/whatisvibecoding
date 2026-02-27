@@ -1,0 +1,31 @@
+<svg width="400" height="200" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .loop {
+      fill: none;
+      stroke: url(#loopGradient);
+      stroke-width: 4;
+      stroke-linecap: round;
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      animation: draw-loop 8s linear infinite;
+    }
+    @keyframes draw-loop {
+      0% { stroke-dashoffset: 1000; }
+      50% { stroke-dashoffset: 0; }
+      100% { stroke-dashoffset: -1000; }
+    }
+    .glow-blur {
+      filter: blur(8px);
+      opacity: 0.5;
+    }
+  </style>
+  <defs>
+    <linearGradient id="loopGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7000FF" />
+      <stop offset="50%" stop-color="#00FFD1" />
+      <stop offset="100%" stop-color="#7000FF" />
+    </linearGradient>
+  </defs>
+  <path class="loop glow-blur" d="M100,100 C100,50 300,50 300,100 C300,150 100,150 100,100 Z" />
+  <path class="loop" d="M100,100 C100,50 300,50 300,100 C300,150 100,150 100,100 Z" />
+</svg>
